@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[sfdefault,light]{roboto}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{linkcolor}{HTML}{1A73E8}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolor,
+}
+
+\begin{document}
+
+%=========== ENTÊTE ===========
+\begin{tabularx}{\textwidth}[t]{@{}X r@{}}
+    \begin{tabular}[t]{@{}l@{}}
+        {\fontsize{18}{18}\selectfont\textbf{[NOM COMPLET]}} \\[0.4em]
+        {\fontsize{12}{12}\selectfont\textit{[Titre ou domaine]}}
+    \end{tabular}
+    &
+    \begin{tabular}[t]{@{}ll@{}} 
+        \begin{tabular}[t]{@{}l@{}} 
+            \faGlobe\hspace{0.6em} \href{[Lien Portfolio]}{Portfolio} \\[0.7em]
+            \reflectbox{\faPhone}\hspace{0.6em} [Téléphone] \\[0.7em]
+            \faMapMarker*\hspace{0.6em} [Ville, Pays]
+        \end{tabular}
+        &
+        \begin{tabular}[t]{@{}l@{}} 
+            \faEnvelope\hspace{0.6em} \href{mailto:[Email]}{[Email]} \\[0.7em]
+            \faGithub\hspace{0.6em} \href{[Lien GitHub]}{GitHub} \\[0.7em]
+            \faLinkedin\hspace{0.6em} \href{[Lien LinkedIn]}{LinkedIn}
+        \end{tabular}
+    \end{tabular}
+\end{tabularx} \\[0.5em]
+
+%===== À PROPOS & COMPÉTENCES =====
+\noindent
+\begin{tabularx}{\textwidth}[t]{@{}p{0.48\textwidth}@{\hspace{2em}}p{0.48\textwidth}@{}}
+  \parbox[t]{\linewidth}{
+    \makebox[0pt][l]{\textbf{\large \`A PROPOS}}%
+    \hspace{4.5em}\rule{\dimexpr\linewidth-5em}{0.4pt} \\[1em]
+    [Br\`eve description personnelle : int\'er\^ets, forces, objectifs.]
+  }
+  &
+  \parbox[t]{\linewidth}{
+    \makebox[0pt][l]{\textbf{\large COMP\'ETENCES}}%
+    \hspace{5em}\rule{\dimexpr\linewidth-5.5em}{0.4pt} \\[1em]
+    \begin{tabular}{@{}p{2.5cm}p{\dimexpr\linewidth-3.2cm}@{}}
+      \textbf{Langages :} & [Python, C++, SQL, etc.] \\[1.5em]
+      \textbf{Outils :} & [Docker, Git, Azure, etc.] \\[1.5em]
+      \textbf{Langues :} & [Français, Anglais, etc.]
+    \end{tabular}
+  }
+\end{tabularx}
+
+%===== ÉDUCATION =====
+\vspace{0.2em}
+\textbf{\large \'EDUCATION} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\
+\begin{tabularx}{\textwidth}{@{}p{3cm} X r@{}}
+    AAAA -- AAAA & 
+    \textbf{[Dipl\^ome ou programme]} & \textbf{\textit{[\'Etablissement]}} \\
+    & [D\'etails optionnels : GPA, sp\'ecialit\'e] & [Ville, Pays] \\
+\end{tabularx}
+
+%===== EXP\'ERIENCE =====
+\vspace{0.2em}
+\textbf{\large EXP\'ERIENCE} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    AAAA -- AAAA & 
+    \textbf{[Poste]} \hfill \textbf{\textit{[Entreprise]}}\\[0.2em]
+    & \textbullet\ \hangindent=0.5em [Responsabilit\'e ou projet majeur.] \\
+    & \textbullet\ \hangindent=0.5em [Deuxi\`eme t\^ache ou r\'ealisation.] \\
+    & \texttt{[Technos utilis\'ees]} \\
+\end{tabularx}
+
+%===== PROJETS =====
+\vspace{0.2em}
+\textbf{\large PROJETS} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    Projet Personnel & 
+    \textbf{[Nom du projet]} \hfill \textbf{\textit{\href{[Lien GitHub]}{GitHub}}}\\[0.2em]
+    & \textbullet\ \hangindent=0.5em [Br\`eve description du but et des fonctionnalit\'es.] \\
+    & \texttt{[Langages / Frameworks]} \\
+\end{tabularx}
+
+%===== IMPLICATIONS =====
+\vspace{0.2em}
+\textbf{\large IMPLICATIONS PARASCOLAIRES} \hspace{1em}\rule{\dimexpr\linewidth-20em}{0.4pt} \\
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    AAAA -- AAAA & 
+    \textbf{[R\^ole]} \hfill \textbf{\textit{[Organisation]}} \\
+    & \textbullet\ \hangindent=0.5em [Responsabilit\'e principale ou r\'esultat obtenu.] \\
+\end{tabularx}
+
+\vspace{0.5cm}
+\end{document}
