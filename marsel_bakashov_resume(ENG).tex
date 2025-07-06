@@ -1,0 +1,139 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[sfdefault,light]{roboto}  % Sets Roboto as sans-serif font
+\renewcommand{\familydefault}{\sfdefault}  % Applies it as default
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{linkcolor}{HTML}{1A73E8}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolor,
+}
+
+\begin{document}
+
+%=========== HEADER ===========
+\begin{tabularx}{\textwidth}[t]{@{}X r@{}}
+    \begin{tabular}[t]{@{}l@{}}
+        {\fontsize{18}{18}\selectfont\textbf{MARSEL BAKASHOV}} \\[0.4em]
+        {\fontsize{12}{12}\selectfont\textit{Software Engineering Student \quad Data Science}}
+    \end{tabular}
+    &
+    \begin{tabular}[t]{@{}ll@{}} 
+        \begin{tabular}[t]{@{}l@{}} 
+            \faGlobe\hspace{0.6em} \href{https://marselbakashov.netlify.app/}{Portfolio} \\[0.7em]
+            \reflectbox{\faPhone}\hspace{0.6em} +1 (514) 664-9320 \\[0.7em]
+            \faMapMarker*\hspace{0.6em} Montreal, Canada
+        \end{tabular}
+        &
+        \begin{tabular}[t]{@{}l@{}} 
+            \faEnvelope\hspace{0.6em} \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \\[0.7em]
+            \faGithub\hspace{0.6em} \href{https://github.com/Mbaka11}{GitHub} \\[0.7em]
+            \faLinkedin\hspace{0.6em} \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{LinkedIn}
+        \end{tabular}
+    \end{tabular}
+\end{tabularx} \\[0.5em]
+
+%===== SUMMARY & SKILLS =====
+\noindent
+\begin{tabularx}{\textwidth}[t]{@{}p{0.48\textwidth}@{\hspace{2em}}p{0.48\textwidth}@{}}
+  \parbox[t]{\linewidth}{
+    \makebox[0pt][l]{\textbf{\large ABOUT ME}}%
+    \hspace{5em}\rule{\dimexpr\linewidth-5.3em}{0.4pt} \\[1em]
+    Passionate and curious software engineering student with a strong interest in data science. Proven ability to work both independently and collaboratively, with a drive to learn, grow, and contribute to innovative projects.
+  }
+  &
+  \parbox[t]{\linewidth}{
+    \makebox[0pt][l]{\textbf{\large SKILLS}}%
+    \hspace{6em}\rule{\dimexpr\linewidth-6.5em}{0.4pt} \\[1em]
+    \begin{tabular}{@{}p{2.5cm}p{\dimexpr\linewidth-3.2cm}@{}}
+      \textbf{Programming:} & Python, C++, Java, SQL, Bash, JavaScript, HTML, R. \\[1.5em]
+      \textbf{Tools:} & Docker, Linux, Git, Airflow, Azure, Power BI, Figma. \\
+      \textbf{Languages:} & French, English, Russian, Spanish, Korean
+    \end{tabular}
+  }
+\end{tabularx}
+
+%===== EDUCATION =====
+\vspace{0.2em}
+\textbf{\large EDUCATION} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+
+\begin{tabularx}{\textwidth}{@{}p{3cm} X r@{}}
+    9/2021 -- 12/2025 & \textbf{Bachelor of Software Engineering} & \textbf{\textit{Polytechnique Montreal}} \\
+    & GPA: 3.2 / 4.0 & Montreal, Canada \\[0.5em]
+    2/2025 -- 6/2025 & \textbf{B.S. in Computer Engineering} & \textbf{\textit{Korea University College of Engineering}} \\
+    & Academic Exchange & Seoul, South Korea &
+\end{tabularx}
+
+%===== EXPERIENCE =====
+\vspace{0.2em}
+\textbf{\large EXPERIENCE} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    5/2024 -- 9/2024 & \textbf{Data Scientist Intern} \hfill \textbf{\textit{Radio-Canada / CBC}} \\
+    & \textbullet\ \hangindent=0.5em Designed an AI-powered unified indexing system centralizing internal content sources for semantic and keyword-based document search. \\
+    & \textbullet\ \hangindent=0.5em Implemented large-scale embedding generation via Azure AI Search; evaluated models (e.g., ELSER, BGE, Cohere). \\
+    & \texttt{ELK / ETL / Airflow / Python / Azure AI Search / Hugging Face / Cohere} \\[0.5em]
+
+    9/2023 -- 12/2023 & \textbf{Full-Stack Developer Intern} \hfill \textbf{\textit{Stingray}} \\
+    & \textbullet\ \hangindent=0.5em Optimized websites using Next.js (SSR), improving performance by 15\%. \\
+    & \textbullet\ \hangindent=0.5em Applied analytics to drive improvements in an Agile setup with CI, testing, and code reviews. \\
+    & \texttt{Next.js / React / Node.js / TypeScript} \\[0.5em]
+
+    5/2023 -- 7/2023 & \textbf{Full-Stack Web Developer (Contract)} \hfill \textbf{\textit{Paragon Reception Hall}} \\
+    & \textbullet\ \hangindent=0.5em Redesigned the website, resulting in +180\% traffic and 120 clicks/month through improved SEO. \\
+    & \texttt{HTML / CSS / SEO / JavaScript} \\[0.5em]
+
+    5/2022 -- 7/2022 & \textbf{Business Intelligence Analyst (Part-time)} \hfill \textbf{\textit{Van De Water}} \\
+    & \textbullet\ \hangindent=0.5em Automated data collection and analysis via Excel macros and standardized Power BI reports. \\
+    & \texttt{Excel / Power BI / Visual Basic}
+\end{tabularx}
+
+%===== PROJECTS =====
+\vspace{0.2em}
+\textbf{\large PROJECTS} \hspace{1em}\rule{\dimexpr\linewidth-7em}{0.4pt} \\[0em]
+
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    Personal Project & \textbf{Weather-Based Disease Outbreak Prediction} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}} \\
+    & \textbullet\ \hangindent=0.5em Predicted outbreaks from climate data using classification models (Logistic Regression, SVM, Decision Trees) with F1-score and AUC-ROC evaluation. \\
+    & \textbullet\ \hangindent=0.5em Identified critical weather patterns using FP-Growth and association rules. \\
+    & \texttt{Python / Jupyter / pandas / scikit-learn / Matplotlib / FP-Growth} \\[0.5em]
+
+    Personal Project & \textbf{Harmonic Hunch} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/AI-game-hackathon}{GitHub}}} \\
+    & \textbullet\ \hangindent=0.5em Built an interactive game using AI models (Demucs, DALL\textperiodcentered E-3) to generate real-time audio tracks and visuals. \\
+    & \texttt{React / Next.js / Node.js / TypeScript / WebSocket / Demucs / DALL\textperiodcentered E-3} \\[0.5em]
+
+    Academic Project & \textbf{AI Agent} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/INF8175-AI_AGENT}{GitHub}}} \\
+    & \textbullet\ \hangindent=0.5em Developed an AI agent for a strategic game using local search, heuristics, and constraints. \\
+    & \texttt{Python / MiniZinc / Genetic Algorithms / Local Search}
+\end{tabularx}
+
+%===== EXTRACURRICULAR =====
+\vspace{0.2em}
+\textbf{\large EXTRACURRICULAR ACTIVITIES} \hspace{1em}\rule{\dimexpr\linewidth-22em}{0.4pt} \\[0.2em]
+
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+    1/2024 -- 8/2024 & \textbf{Teaching Assistant -- Discrete Mathematics} \hfill \textbf{\textit{Polytechnique Montreal}} \\
+    & \textbullet\ Led review sessions, graded assignments, and supported 80+ students in logic and graph theory. \\[0.6em]
+
+    1/2024 -- 5/2024 & \textbf{Sponsorship Director} \hfill \textbf{\textit{PolyAI Hackathon}} \\
+    & \textbullet\ Raised over \$22,000 in funding and led a sponsorship team with weekly meetings. \\
+
+\end{tabularx}
+
+\vspace{0.5cm}
+
+\end{document}

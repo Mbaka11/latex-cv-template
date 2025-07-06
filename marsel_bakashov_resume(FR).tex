@@ -1,0 +1,158 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[sfdefault,light]{roboto}  % Définit Roboto comme police sans-serif
+\renewcommand{\familydefault}{\sfdefault}  % L’applique comme police par défaut
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{linkcolor}{HTML}{1A73E8}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolor,
+}
+
+\begin{document}
+    
+    %=========== HEADER ===========
+    \begin{tabularx}{\textwidth}[t]{@{}X r@{}}
+        \begin{tabular}[t]{@{}l@{}}
+            {\fontsize{18}{18}\selectfont\textbf{MARSEL BAKASHOV}} \\[0.4em]
+            {\fontsize{12}{12}\selectfont\textit{Étudiant en Génie Logiciel \quad Data Science}}
+        \end{tabular}
+        &
+        \begin{tabular}[t]{@{}ll@{}} 
+            \begin{tabular}[t]{@{}l@{}} 
+                \faGlobe\hspace{0.6em} \href{https://marselbakashov.netlify.app/}{Portfolio} \\[0.7em]
+                \reflectbox{\faPhone}\hspace{0.6em} +1 (514) 664-9320 \\[0.7em]
+                \faMapMarker*\hspace{0.6em} Montréal, Canada
+            \end{tabular}
+            &
+            \begin{tabular}[t]{@{}l@{}} 
+                \faEnvelope\hspace{0.6em} \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \\[0.7em]
+                \faGithub\hspace{0.6em} \href{https://github.com/Mbaka11}{GitHub} \\[0.7em]
+                \faLinkedin\hspace{0.6em} \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{LinkedIn}
+            \end{tabular}
+        \end{tabular}
+    \end{tabularx} \\[0.5em]
+    
+    %===== SUMMARY & SKILLS (2 colonnes) =====
+    \noindent
+    \begin{tabularx}{\textwidth}[t]{@{}p{0.48\textwidth}@{\hspace{2em}}p{0.48\textwidth}@{}}
+      % Bloc gauche – À PROPOS
+      \parbox[t]{\linewidth}{
+        \makebox[0pt][l]{\textbf{\large À PROPOS}}%
+        \hspace{6em}\rule{\dimexpr\linewidth-6.2em}{0.4pt} \\[1em]
+        Étudiant en génie logiciel passionné par la data science motivé et curieux, animé par un fort esprit d’initiative et le goût des défis techniques. Capacité démontrée à travailler de façon autonome et en équipe, avec une réelle volonté d’apprendre, de progresser et de contribuer activement à des projets innovants.
+      }
+      &
+      % Bloc droit – COMPÉTENCES
+      \parbox[t]{\linewidth}{
+        \makebox[0pt][l]{\textbf{\large COMPÉTENCES}}%
+        \hspace{9em}\rule{\dimexpr\linewidth-9.5em}{0.5pt} \\[1em]
+        \begin{tabular}{@{}p{2.5cm}p{\dimexpr\linewidth-3.2cm}@{}}
+          \textbf{Languages:} & Python, C++, Java, SQL, Bash, JavaScript, HTML, R. \\[1.5em]
+          \textbf{Technologies:} & Docker, Linux, Git, Airflow, Azure, Power BI, Figma.
+          \\[1.5em]
+          \textbf{Langues:} & Français, Anglais, Russe, Espagnol, Coréen
+        \end{tabular}
+      }
+    \end{tabularx}
+    
+    %===== EDUCATION (1 colonne) =====
+    \vspace{0.2em}
+    \textbf{\large ÉDUCATION} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X r@{}}
+        9/2021 -- 12/2025 & 
+        \textbf{Baccalauréat en Génie logiciel} 
+        & \textbf{\textit{Polytechnique Montréal}} \\ 
+        & GPA: 3.2 / 4.0 & 
+        Montréal, Canada \\[0.5em]
+        
+        2/2025 -- 6/2025 & 
+        \textbf{B.S. en Computer Engineering} 
+        & \textbf{\textit{Korea University College of Engineering}} \\ 
+        & Échange académique & 
+        Séoul, Corée du Sud &
+    \end{tabularx}
+    
+    %===== EXPÉRIENCE =====
+    \vspace{0.2em}
+    \textbf{\large EXPÉRIENCE} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        5/2024 -- 9/2024 & 
+        \textbf{Data Scientist Stagiaire} \hfill \textbf{\textit{Radio-Canada / CBC}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Conçu un système d’indexation unifié alimenté par l’IA, centralisant les contenus de multiples sources internes pour la recherche documentaire sémantique et lexicale. \\
+        & \textbullet\ \hangindent=0.5em Implémenté la génération d’embeddings à grande échelle via Azure AI Search et testé plusieurs modèles (e.g. ELSER, BGE, Cohere) pour la recherche sémantique et classique. \\
+        & \texttt{ELK / ETL / Airflow / Python / Azure AI Search / Hugging Face / Cohere} \\[0.5em]
+    
+        9/2023 -- 12/2023 & 
+        \textbf{Développeur Full-Stack Stagiaire} \hfill \textbf{\textit{Stingray}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Optimisé des sites web avec Next.js (SSR), augmentant les performances de 15\,\%. \\
+        & \textbullet\ \hangindent=0.5em Utilisé des outils analytiques pour guider les améliorations continues dans un environnement Agile avec revue de code, tests unitaires et intégration continue. \\
+        & \texttt{Next.js / React / Node.js / TypeScript} \\[0.5em]
+        
+        5/2023 -- 7/2023 & 
+        \textbf{Développeur Web Full-Stack (Mandat local)} \hfill \textbf{\textit{Salle de réception Paragon}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Refondu le site web, générant +180\,\% de trafic et 120 clics/mois via le SEO.  \\
+        & \texttt{HTML / CSS / SEO / JavaScript} \\[0.5em]
+        
+        5/2022 -- 7/2022 & 
+        \textbf{Analyste, Business Intelligence (temps partiel)} \hfill \textbf{\textit{Van De Water}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Automatisé la collecte et l’analyse de données avec des macros Excel et rapports Power BI. \\
+        & \texttt{Excel / Power BI / Visual Basic}
+    \end{tabularx}
+    
+    %===== PROJETS =====
+    \vspace{0.2em}
+    \textbf{\large PROJETS} \hspace{1em}\rule{\dimexpr\linewidth-7em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        Projet Personnel & 
+        \textbf{Weather-Based Disease Outbreak Prediction} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Prédiction d’épidémies à partir de données climatiques à l’aide de modèles de classification
+        (Logistic Regression, SVM, Arbres de décision) et évaluation de modèles (F1-score, AUC-ROC). \\
+        & \textbullet\ \hangindent=0.5em Analyse de patterns climatiques via FP-Growth et règles d’association.\\
+        & \texttt{Python / Jupyter / pandas / scikit-learn / Matplotlib / FP-Growth} \\[0.5em]
+        
+        Projet Personnel & 
+        \textbf{Harmonic Hunch} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/AI-game-hackathon}{GitHub}}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Création d’un jeu interactif exploitant des modèles d’IA (Demucs, DALL·E-3) pour générer des pistes audio et des visuels en temps réel. \\
+        & \texttt{React / Next.js / Node.js / TypeScript / WebSocket / Demucs / DALL·E-3} \\[0.5em]
+    
+        Projet Académique & 
+        \textbf{Agent IA} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/INF8175-AI_AGENT}{GitHub}}} \\[0.2em]
+        & \textbullet\ \hangindent=0.5em Conception d’un agent IA pour un jeu stratégique (recherche locale, heuristiques, contraintes). \\
+        & \texttt{Python / MiniZinc / Algorithmes génétiques / Recherche locale}
+    \end{tabularx}
+
+    %===== AUTRES IMPLICATIONS =====
+    \vspace{0.2em}
+    \textbf{\large IMPLICATIONS PARASCOLAIRES} \hspace{1em}\rule{\dimexpr\linewidth-20em}{0.4pt} \\[0.2em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        1/2024 -- 8/2024 & 
+        \textbf{Assistant d’enseignement – Mathématiques discrètes} \hfill \textbf{\textit{Polytechnique Montréal}} \\
+        & \textbullet\ Animé des révisions, corrigé des devoirs et soutenu 80+ étudiants en logique et graphes.\\[0.6em]
+        
+        1/2024 -- 5/2024 & 
+        \textbf{Directeur des sponsors} \hfill \textbf{\textit{PolyAI Hackathon}} \\
+        & \textbullet\ Obtenu 22 000 \$ en financement et dirigé une équipe de commandites avec réunions. 
+    \end{tabularx}
+
+\vspace{0.5cm}
+
+\end{document}
