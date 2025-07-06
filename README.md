@@ -1,4 +1,3 @@
-```markdown
 # 📄 LaTeX Resume Template (Blank with Placeholders)
 
 A clean, professional and customizable LaTeX resume template designed for software engineers, data scientists, and students. This template includes placeholders for all sections, making it easy to fill in with your personal information.
