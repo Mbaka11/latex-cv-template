@@ -18,9 +18,8 @@ A clean, professional and customizable LaTeX resume template designed for softwa
 
 ## 📁 Files Included
 
-- `blank_resume(ENG).tex` – the LaTeX source file with placeholders
-- `marsel_bakashov_resume(ENG).tex` – example of a completed resume with my infos
-- `marsel_bakashov_resume(FR).pdf` – (optional) compiled version to preview the layout
+- `Marsel_Bakashov_CV_EN/main.tex` – completed English resume
+- `Marsel_Bakashov_CV_FR/main.tex` – completed French resume
 - `README.md` – this file
 - `cv.sty` (optional) – optional file for centralized styling
 - `assets/` (optional) – add a profile picture or custom assets if desired
@@ -36,7 +35,7 @@ A clean, professional and customizable LaTeX resume template designed for softwa
    git clone https://github.com/yourusername/latex-cv-template.git
    cd latex-cv-template
    ```
-2. Open `blank_resume.tex` in your LaTeX editor (Texmaker, VSCode, etc.)
+2. Open `Marsel_Bakashov_CV_EN/main.tex` in your LaTeX editor (Texmaker, VSCode, etc.)
 3. Compile with `pdflatex`, `xelatex`, or on Overleaf
 
 ### Option 2: Use with Overleaf
@@ -44,13 +43,13 @@ A clean, professional and customizable LaTeX resume template designed for softwa
 1. Go to [Overleaf](https://overleaf.com)
 2. Click on "New Project" → "Upload Project"
 3. Upload all files from this repo
-4. Open `blank_resume.tex` and edit the placeholder content
+4. Open `Marsel_Bakashov_CV_EN/main.tex` or `Marsel_Bakashov_CV_FR/main.tex` and edit the content
 
 ---
 
 ## ✍️ How to Customize
 
-Edit the file `blank_resume.tex` and replace all placeholder text (`FULL NAME`, `Your Job Title`, etc.) with your own data.
+Edit `Marsel_Bakashov_CV_EN/main.tex` or `Marsel_Bakashov_CV_FR/main.tex` and replace all placeholder text (`FULL NAME`, `Your Job Title`, etc.) with your own data.
 
 Use the section titles to guide you:
 - ABOUT
@@ -88,9 +87,8 @@ Un modèle LaTeX propre, professionnel et personnalisable conçu pour les étudi
 
 ## 📁 Fichiers inclus
 
-- `blank_resume(FR).tex` – fichier LaTeX principal avec des espaces réservés
-- `marsel_bakashov_resume(FR).tex` – exemple d'un CV complété avec mes infos persos
-- `marsel_bakashov_resume(FR).pdf` – exemple compilé ()
+- `Marsel_Bakashov_CV_EN/main.tex` – CV complété en anglais
+- `Marsel_Bakashov_CV_FR/main.tex` – CV complété en français
 - `README.md` – ce fichier
 - `cv.sty` – fichier de style optionnel
 - `assets/` – pour vos logos ou photo (facultatif)
@@ -106,20 +104,20 @@ git clone https://github.com/yourusername/latex-cv-template.git
 cd latex-cv-template
 ```
 
-Ouvrez `blank_resume.tex` dans votre éditeur LaTeX et compilez avec `pdflatex` ou `xelatex`.
+Ouvrez `Marsel_Bakashov_CV_FR/main.tex` dans votre éditeur LaTeX et compilez avec `pdflatex` ou `xelatex`.
 
 ### Option 2 : Utiliser avec Overleaf
 
 1. Aller sur [Overleaf](https://overleaf.com)
 2. Créez un nouveau projet → "Importer un projet ZIP"
 3. Importez tous les fichiers de ce dépôt
-4. Éditez `blank_resume.tex` pour remplacer les informations
+4. Éditez `Marsel_Bakashov_CV_FR/main.tex` pour remplacer les informations
 
 ---
 
 ## ✏️ Personnalisation
 
-Remplacez les textes génériques dans `blank_resume.tex` par vos données :
+Remplacez les textes génériques dans `Marsel_Bakashov_CV_FR/main.tex` par vos données :
 - NOM COMPLET
 - TITRE / POSTE
 - ÉDUCATION
