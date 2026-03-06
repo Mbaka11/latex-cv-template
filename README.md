@@ -52,6 +52,7 @@ A clean, professional and customizable LaTeX resume template designed for softwa
 Edit `Marsel_Bakashov_CV_EN/main.tex` or `Marsel_Bakashov_CV_FR/main.tex` and replace all placeholder text (`FULL NAME`, `Your Job Title`, etc.) with your own data.
 
 Use the section titles to guide you:
+
 - ABOUT
 - SKILLS
 - EDUCATION
@@ -71,7 +72,7 @@ This project is licensed under the MIT License.
 
 # 🇫🇷 Modèle de CV LaTeX (avec espaces réservés)
 
-Un modèle LaTeX propre, professionnel et personnalisable conçu pour les étudiants, ingénieurs et scientifiques des données. Tous les champs sont préremplis avec des *placeholders* pour faciliter la personnalisation.
+Un modèle LaTeX propre, professionnel et personnalisable conçu pour les étudiants, ingénieurs et scientifiques des données. Tous les champs sont préremplis avec des _placeholders_ pour faciliter la personnalisation.
 
 ---
 
@@ -118,6 +119,7 @@ Ouvrez `Marsel_Bakashov_CV_FR/main.tex` dans votre éditeur LaTeX et compilez av
 ## ✏️ Personnalisation
 
 Remplacez les textes génériques dans `Marsel_Bakashov_CV_FR/main.tex` par vos données :
+
 - NOM COMPLET
 - TITRE / POSTE
 - ÉDUCATION
@@ -132,4 +134,7 @@ Supprimez toute section non nécessaire.
 ## 📌 Licence
 
 Distribué sous licence MIT.
+
+```
+
 ```
