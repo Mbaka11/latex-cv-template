@@ -1,0 +1,154 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage[sfdefault,light]{roboto}  % Définit Roboto comme police sans-serif
+\renewcommand{\familydefault}{\sfdefault}  % L’applique comme police par défaut
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    
+    %=========== HEADER ===========
+    \begin{tabularx}{\textwidth}[t]{@{}X r@{}}
+        \begin{tabular}[t]{@{}l@{}}
+            {\fontsize{18}{18}\selectfont\textbf{MARSEL BAKASHOV}} \\[0.4em]
+            {\fontsize{12}{12}\selectfont\textit{Étudiant en Génie Logiciel}} \\[0.3em]
+            {\fontsize{11}{11}\selectfont Data Science / ML / RL / AI}
+        \end{tabular}
+        &
+        \begin{tabular}[t]{@{}ll@{}} 
+            \begin{tabular}[t]{@{}l@{}} 
+                \faGlobe\hspace{0.6em} Portfolio \\[0.7em]
+                \reflectbox{\faPhone}\hspace{0.6em} +1 (514) 664-9320 \\[0.7em]
+                \faMapMarker*\hspace{0.6em} Montréal, Canada
+            \end{tabular}
+            &
+            \begin{tabular}[t]{@{}l@{}} 
+                \faEnvelope\hspace{0.6em} m.bakashov11@gmail.com \\[0.7em]
+                \faGithub\hspace{0.6em} GitHub \\[0.7em]
+                \faLinkedin\hspace{0.6em} LinkedIn
+            \end{tabular}
+        \end{tabular}
+    \end{tabularx} \\[0.5em]
+    
+    %===== SUMMARY & SKILLS (2 colonnes) =====
+    \noindent
+    \begin{tabularx}{\textwidth}[t]{@{}p{0.48\textwidth}@{\hspace{2em}}p{0.48\textwidth}@{}}
+      % Bloc gauche – À PROPOS
+      \parbox[t]{\linewidth}{
+        \makebox[0pt][l]{\textbf{\large À PROPOS}}%
+        \hspace{6em}\rule{\dimexpr\linewidth-6.2em}{0.4pt} \\[0.5em]
+            Étudiant en génie logiciel spécialisé en apprentissage automatique et en apprentissage par renforcement, avec de l’expérience dans l’application du ML à des systèmes à grande échelle et à des problèmes industriels réels (tarification en assurance, maintenance prédictive, recherche sémantique). Passionné par la conception de systèmes fondés sur les données reliant recherche et production.
+      }
+      &
+      % Bloc droit – COMPÉTENCES
+      \parbox[t]{\linewidth}{
+        \makebox[0pt][l]{\textbf{\large COMPÉTENCES}}%
+        \hspace{9em}\rule{\dimexpr\linewidth-9.5em}{0.5pt} \\[1em]
+        \begin{tabular}{@{}p{2.5cm}p{\dimexpr\linewidth-3.2cm}@{}}
+          \textbf{Languages:} & Python, C++, Java, SQL, Bash, R \\[0.2em]
+          \textbf{Data / MLOps:} & PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLFlow \\[0.2em]
+          \textbf{Technologies:} & Docker, Git, Airflow, Azure, Power BI, Jenkins, Databricks, Snowflake
+          \\[0.2em]
+          \textbf{Langues:} & Anglais, Français, Russe, Espagnol, Coréen
+        \end{tabular}
+      }
+    \end{tabularx}
+    
+    %===== EDUCATION (1 colonne) =====
+    \vspace{0.2em}
+    \textbf{\large ÉDUCATION} \hspace{0.2em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X r@{}}
+        1/2026 -- 2/2027 & 
+        \textbf{Maîtrise pro en Apprentissage automatique} 
+        & \textbf{\textit{Université de Montréal / McGill  - MILA}} \\ 
+        % & GPA: 3.4 / 4.0 & 
+        & En cours & 
+        Montréal, Canada \\[0.2em]
+        
+        9/2021 -- 12/2025 & 
+        \textbf{Baccalauréat en Génie logiciel} 
+        & \textbf{\textit{Polytechnique Montréal}} \\ 
+        & GPA: 3.4 / 4.0 & 
+        Montréal, Canada \\[0.2em]
+        
+        2/2025 -- 6/2025 & 
+        \textbf{Baccalauréat en Computer Engineering} 
+        & \textbf{\textit{Korea University College of Engineering}} \\ 
+        & Échange académique & 
+        Séoul, Corée du Sud &
+    \end{tabularx}
+    
+    %===== EXPÉRIENCE =====
+    \vspace{0.2em}
+    \textbf{\large EXPÉRIENCE} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        1/2026 -- 5/2026 & 
+        \textbf{Data Scientist \& RL Stagiaire} \hfill \textbf{\textit{Intact Assurance}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Développé des politiques de tarification dynamique en RL sous contraintes réglementaires et business (primal--dual), améliorant la profitabilité long terme et réduisant la volatilité.\\
+        & \texttt{Python / PyTorch / RL / CVaR  / MLflow / Databricks / Snowflake} \\[0.5em]
+        
+        6/2025 -- 9/2025 & 
+        \textbf{Data Scientist \& ML Stagiaire} \hfill \textbf{\textit{Pratt \& Whitney}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Développé des modèles prédictifs pour estimer la durée de vie restante des moteurs, permettant de mieux planifier la maintenance et de réduire les interruptions imprévues de 15 \%.  \\
+        & \texttt{Python / Scikit-learn / PyTorch / Pandas / NumPy / MLflow / Jupyter} \\[0.5em]
+        
+        5/2024 -- 9/2024 & 
+        \textbf{Data Scientist Stagiaire} \hfill \textbf{\textit{Radio-Canada / CBC}}\\[0.2em]
+       & \textbullet\ \hangindent=0.5em Conçu un système d’indexation unifié basé sur l’IA, centralisant les sources de contenu internes pour la recherche sémantique et lexicale (15 M+ d’éléments et utilisé par 100+ employés). \\
+        & \texttt{ELK / ETL / Airflow / Python / Azure AI Search / Hugging Face / Embeddings} \\[0.5em]
+    
+        9/2023 -- 12/2023 & 
+        \textbf{Développeur Full-Stack Stagiaire} \hfill \textbf{\textit{Stingray}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Intégré des outils analytiques, tests, CI/CD et revues de code pour des itérations agiles . \\
+        & \texttt{Next.js / React / Node.js / TypeScript} \\[0.5em]
+    \end{tabularx}
+    
+    %===== PROJETS =====
+    \vspace{0.2em}
+    \textbf{\large PROJETS} \hspace{1em}\rule{\dimexpr\linewidth-7em}{0.4pt} \\[0em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        Projet personnel & \textbf{GravityGuyML — Jeu à Gravité avec Apprentissage par Renforcement} \hfill \textbf{\textit{GitHub}} \\
+        & \textbullet\ \hangindent=0.5em Conçu un environnement \texttt{Pygame} compatible avec \texttt{Gymnasium}, intégrant une génération procédurale et des agents d’apprentissage profond (\texttt{DQN}, \texttt{PPO}, \texttt{SAC}, \texttt{A2C}). \\
+        & \texttt{Python / ML / DL / RL / TensorFlow} \\[0.2em]
+        
+        Projet personnel & \textbf{Quantitative Finance Notes — Modélisation Monte Carlo et GBM} \hfill \textbf{\textit{GitHub}} \\
+        & \textbullet\ \hangindent=0.5em Créé des notebooks reproductibles sur processus stochastiques, simulations Monte Carlo et Mouvement Brownien Géométrique pour la modélisation de marché et la calibration de données. \\
+        & \texttt{Python / NumPy / Pandas / Matplotlib / Monte Carlo / Finance quantitative / GBM} \\[0.2em]
+
+        Projet Personnel & 
+        \textbf{Weather-Based Disease Outbreak Prediction} \hfill \textbf{\textit{GitHub}}\\[0.2em]
+        & \textbullet\ \hangindent=0.5em Prédiction d’épidémies à partir de données climatiques à l’aide de modèles de classification
+        (Logistic Regression, SVM, Arbres de décision) et évaluation de modèles (F1-score, AUC-ROC). \\
+        & \texttt{Python / Jupyter / pandas / scikit-learn / Matplotlib / FP-Growth} \\
+    \end{tabularx}
+
+    %===== AUTRES IMPLICATIONS =====
+    \vspace{0.2em}
+    \textbf{\large IMPLICATIONS PARASCOLAIRES} \hspace{1em}\rule{\dimexpr\linewidth-20em}{0.4pt} \\[0.2em]
+    
+    \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+        1/2024 -- 8/2024 & 
+        \textbf{Assistant d’enseignement – Mathématiques discrètes} \hfill \textbf{\textit{Polytechnique Montréal}} \\
+        & \textbullet\ Animé des révisions, corrigé des devoirs et soutenu 80+ étudiants en logique et graphes.\\[0.2em]
+        
+        1/2024 -- 5/2024 & 
+        \textbf{Directeur des sponsors} \hfill \textbf{\textit{PolyAI Hackathon}} \\
+        & \textbullet\ Obtenu 22 000 \$ en financement et dirigé une équipe de commandites avec réunions. 
+    \end{tabularx}
+
+\vspace{0.5cm}
+
+\end{document}
