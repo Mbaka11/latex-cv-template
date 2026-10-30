@@ -1,140 +1,82 @@
-# 📄 LaTeX Resume Template (Blank with Placeholders)
+# LaTeX CV
 
-A clean, professional and customizable LaTeX resume template designed for software engineers, data scientists, and students. This template includes placeholders for all sections, making it easy to fill in with your personal information.
+The one-page CV I use for internship applications, written in LaTeX. Fork it and replace the content with your own to reuse the layout.
 
-> 🇫🇷 Ce template est également disponible en français.
+[Version française plus bas](#cv-latex-en-français)
 
----
+## Contents
 
-## ✨ Features
+| Path | What it is |
+| --- | --- |
+| `Marsel_Bakashov_CV_EN/main.tex` | English CV |
+| `Marsel_Bakashov_CV_FR/main.tex` | French CV |
+| `Marsel_Bakashov_CV_FR_La_Caisse_Quant/main.tex` | French variant tailored to quantitative finance |
+| `Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of the three versions |
+| `CV_REVISION_NOTES.md` | Working notes on wording choices and open items |
 
-- ⚙️ Fully written in LaTeX (uses `tabularx`, `roboto` font, FontAwesome icons)
-- 🧩 Modular layout with sections for Summary, Education, Experience, Projects, and More
-- 🎯 One-page layout, compact and ATS-friendly
-- 🌍 Multilingual support (French & English)
-- 📝 Placeholder version included for easy customization
+## Layout
 
----
+- Single page, A4, Roboto font, FontAwesome icons.
+- Two-column summary and skills block, then education, experience, projects and activities in a `tabularx` grid.
+- Section headings use one `\sechead{...}` macro, so the rules always end at the right margin.
+- Plain text is extractable from the PDF, which helps applicant tracking systems.
 
-## 📁 Files Included
+## Build
 
-- `Marsel_Bakashov_CV_EN/main.tex` – completed English resume
-- `Marsel_Bakashov_CV_FR/main.tex` – completed French resume
-- `README.md` – this file
-- `cv.sty` (optional) – optional file for centralized styling
-- `assets/` (optional) – add a profile picture or custom assets if desired
-
----
-
-## 🚀 Getting Started
-
-### Option 1: Use Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/latex-cv-template.git
-   cd latex-cv-template
-   ```
-2. Open `Marsel_Bakashov_CV_EN/main.tex` in your LaTeX editor (Texmaker, VSCode, etc.)
-3. Compile with `pdflatex`, `xelatex`, or on Overleaf
-
-### Option 2: Use with Overleaf
-
-1. Go to [Overleaf](https://overleaf.com)
-2. Click on "New Project" → "Upload Project"
-3. Upload all files from this repo
-4. Open `Marsel_Bakashov_CV_EN/main.tex` or `Marsel_Bakashov_CV_FR/main.tex` and edit the content
-
----
-
-## ✍️ How to Customize
-
-Edit `Marsel_Bakashov_CV_EN/main.tex` or `Marsel_Bakashov_CV_FR/main.tex` and replace all placeholder text (`FULL NAME`, `Your Job Title`, etc.) with your own data.
-
-Use the section titles to guide you:
-
-- ABOUT
-- SKILLS
-- EDUCATION
-- EXPERIENCE
-- PROJECTS
-- EXTRACURRICULAR
-
-If you don't need a section, feel free to delete it entirely.
-
----
-
-## 📌 License
-
-This project is licensed under the MIT License.
-
----
-
-# 🇫🇷 Modèle de CV LaTeX (avec espaces réservés)
-
-Un modèle LaTeX propre, professionnel et personnalisable conçu pour les étudiants, ingénieurs et scientifiques des données. Tous les champs sont préremplis avec des _placeholders_ pour faciliter la personnalisation.
-
----
-
-## ✨ Fonctionnalités
-
-- ⚙️ 100% LaTeX (utilise `tabularx`, police `roboto`, icônes FontAwesome)
-- 🧩 Mise en page modulaire : Résumé, Éducation, Expérience, Projets, etc.
-- 🎯 CV d’une seule page, compact et compatible ATS
-- 🌍 Bilingue (français & anglais)
-- 📝 Version avec champs à remplir incluse
-
----
-
-## 📁 Fichiers inclus
-
-- `Marsel_Bakashov_CV_EN/main.tex` – CV complété en anglais
-- `Marsel_Bakashov_CV_FR/main.tex` – CV complété en français
-- `README.md` – ce fichier
-- `cv.sty` – fichier de style optionnel
-- `assets/` – pour vos logos ou photo (facultatif)
-
----
-
-## 🚀 Premiers Pas
-
-### Option 1 : Utiliser localement
+You need a LaTeX distribution with the `roboto` and `fontawesome5` packages (MiKTeX and TeX Live both have them).
 
 ```bash
-git clone https://github.com/yourusername/latex-cv-template.git
-cd latex-cv-template
+cd Marsel_Bakashov_CV_EN
+pdflatex main.tex
 ```
 
-Ouvrez `Marsel_Bakashov_CV_FR/main.tex` dans votre éditeur LaTeX et compilez avec `pdflatex` ou `xelatex`.
+You can also upload the folder to [Overleaf](https://www.overleaf.com) and compile `main.tex` there.
 
-### Option 2 : Utiliser avec Overleaf
+## Reuse
 
-1. Aller sur [Overleaf](https://overleaf.com)
-2. Créez un nouveau projet → "Importer un projet ZIP"
-3. Importez tous les fichiers de ce dépôt
-4. Éditez `Marsel_Bakashov_CV_FR/main.tex` pour remplacer les informations
+1. Fork or clone the repository.
+2. In `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
+3. Remove any section you do not need.
+4. Recompile and check that the result still fits on one page.
+
+## License
+
+MIT License.
 
 ---
 
-## ✏️ Personnalisation
+# CV LaTeX en français
 
-Remplacez les textes génériques dans `Marsel_Bakashov_CV_FR/main.tex` par vos données :
+Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. Faites-en une copie et remplacez le contenu par le vôtre pour réutiliser la mise en page.
 
-- NOM COMPLET
-- TITRE / POSTE
-- ÉDUCATION
-- EXPÉRIENCE
-- PROJETS
-- IMPLICATIONS PARASCOLAIRES
+## Contenu
 
-Supprimez toute section non nécessaire.
+| Chemin | Description |
+| --- | --- |
+| `Marsel_Bakashov_CV_EN/main.tex` | CV en anglais |
+| `Marsel_Bakashov_CV_FR/main.tex` | CV en français |
+| `Marsel_Bakashov_CV_FR_La_Caisse_Quant/main.tex` | Variante française orientée finance quantitative |
+| `Marsel_Bakashov_CV_*.pdf` | PDF compilés des trois versions |
+| `CV_REVISION_NOTES.md` | Notes de travail sur la rédaction et les points à confirmer |
 
----
+## Compilation
 
-## 📌 Licence
+Il faut une distribution LaTeX avec les paquets `roboto` et `fontawesome5` (MiKTeX et TeX Live les incluent).
 
-Distribué sous licence MIT.
-
+```bash
+cd Marsel_Bakashov_CV_FR
+pdflatex main.tex
 ```
 
-```
+Le dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
+
+## Réutilisation
+
+1. Copiez ou clonez le dépôt.
+2. Dans `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
+3. Supprimez les sections inutiles.
+4. Recompilez et vérifiez que le CV tient toujours sur une page.
+
+## Licence
+
+Licence MIT.

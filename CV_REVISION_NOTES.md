@@ -1,37 +1,32 @@
 # CV revision notes (working file)
 
-Last pass: content and layout review of the three active CVs
-(`Marsel_Bakashov_CV_EN`, `Marsel_Bakashov_CV_FR`, `Marsel_Bakashov_CV_FR_La_Caisse_Quant`).
-All three still fit on **one page**.
+Content and layout notes for the three active CVs (`EN`, `FR`, `FR_La_Caisse_Quant`).
+All three fit on **one page** at 9.5 pt (the quant variant uses 10 pt).
 
-## Rules agreed for this CV
+## Rules for this CV
 
 - Every bullet starts with an action verb (past tense in English, past participle in French).
-- Keep the About section **evergreen**: no season, date or availability (applications cover Winter, Summer, Fall).
-- The master's GPA (4.0 / 4.0, in progress) and bachelor's GPA (3.4 / 4.0) stay.
-- Language levels stay off the CV (space); keep body text at 9.5 pt so it fits one page.
-- 4–7 technologies per role, most relevant first; each tool appears once when possible (Snowflake only at McKesson).
-- EN and FR versions are updated together. The quant variant keeps its own tailoring (title line, skills, projects).
+- The About section is a short personal pitch, not a summary of the experience below. It stays evergreen: no season, date or availability.
+- GPA stays on the CV; no language levels (space); no "in progress" labels because the dates already show it.
+- 4 to 7 technologies per role, most relevant first; avoid repeating a tool across roles when possible.
+- EN and FR are updated together. The quant variant keeps its own tailoring (title line, About, skills, quant project).
 
-## Changes in this pass
+## Latest pass
 
-- Subtitle: "Software Engineering Student" -> master's student in machine learning.
-- About/À propos rewritten (healthcare, insurance, media internships; RL, AI agents, semantic search).
-- McKesson: AI agents used by 100+ team members, saving hours of manual work; sensitive health data (PHI) via APIs.
-- Intact: policies that improved simulated long-term profitability under constraints; validation on profitability, volatility, CVaR.
-- Radio-Canada, Stingray, projects: tighter wording; Stingray EN/FR now say the same thing.
-- Skills reorganised (Programming / ML-Data / Tools); Jenkins removed; FR labels translated.
-- FR cleanup: English titles/labels translated, "Directeur des commandites", typo fixed.
-- Layout: section rules now end exactly at the right margin; heading spacing evened out; no hyphenated tool names.
+- About rewritten as a generic personal pitch (EN and FR); the quant variant keeps its employer-specific About.
+- McKesson: multi-agent workflows with orchestration, agents with their own tools and skills, at scale; 100+ users; sensitive health data (PHI) via APIs.
+- Quant finance notes replaced by **ApplyPilot** (agent that analyzes postings, picks a CV, drafts letters, autofills forms) in EN and FR. The quant variant keeps the quant project.
+- Polytechnique GPA updated to 3.7 / 4.0; "in progress" removed from the master's GPA.
+- README rewritten without emojis and with accurate file descriptions.
 
-## To confirm (not invented on purpose)
+## To confirm
 
-- **McKesson:** real number of hours saved (per week / per user) and the approximate number of users if known.
-- **Intact:** any real figure from the work (profit uplift in simulation, scenarios, policies evaluated).
-  The CV currently says "improved simulated long-term profitability" without a percentage.
-- **Radio-Canada / Stingray:** search latency, adoption, features shipped — only if known.
-- Master's GPA: consider "(first term)" if the 4.0 reads as too early.
+- **GPA 3.7 (Polytechnique):** an unofficial transcript seen earlier showed a lower cumulative figure. Check it against the official transcript before sending, since some employers ask for it.
+- **McKesson "about 10 hours per week per user":** this is an estimate, written as such in the French wording ("estimé"). Replace with a measured figure, or soften to "saving hours", if you cannot back it up in an interview.
+- **Intact:** no figure available; the CV says "improved simulated long-term profitability" without a percentage.
+- Radio-Canada / Stingray: add any real metric (latency, adoption, features shipped) if known.
 
 ## Not changed
 
 - `Marsel_Bakashov_CV_FR/main copy.tex` (legacy copy) and the untracked compiled `main.pdf` files.
+- `profile.yaml` in ApplyPilot still has the previous GPA and older wording.
