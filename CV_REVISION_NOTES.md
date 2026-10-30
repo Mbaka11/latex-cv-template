@@ -17,6 +17,7 @@ All three fit on **one page** at 9.5 pt (the quant variant uses 10 pt).
 - McKesson: multi-agent workflows with orchestration, agents with their own tools and skills, at scale; 100+ users; sensitive health data (PHI) via APIs.
 - Quant finance notes replaced by **ApplyPilot** (agent that analyzes postings, picks a CV, drafts letters, autofills forms) in EN and FR. The quant variant keeps the quant project.
 - Polytechnique GPA updated to 3.7 / 4.0; "in progress" removed from the master's GPA.
+- Bullets use a hanging indent (`\bul` macro): the bullet is inset and wrapped lines align under the text.
 - README rewritten without emojis and with accurate file descriptions.
 
 ## To confirm
