@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
 \usepackage{geometry}
-\geometry{margin=1.5cm}
+\geometry{left=1.5cm,right=1.5cm,top=1cm,bottom=1cm}
 \usepackage{fontawesome5}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -23,13 +23,16 @@
   urlcolor=linkcolor,
 }
 
+\newcommand{\sechead}[1]{\vspace{0.5em}\noindent\textbf{\large #1}\hspace{0.8em}\leaders\hbox to 1pt{\hss\raisebox{0.3em}{\rule{1pt}{0.4pt}}\hss}\hfill\null\par\vspace{0.45em}}
+
 \begin{document}
+\fontsize{9.5}{11}\selectfont
 
 %=========== HEADER ===========
 \begin{tabularx}{\textwidth}[t]{@{}X r@{}}
     \begin{tabular}[t]{@{}l@{}}
         {\fontsize{18}{18}\selectfont\textbf{MARSEL BAKASHOV}} \\[0.4em]
-        {\fontsize{12}{12}\selectfont\textit{Software Engineering Student}} \\[0.3em]
+        {\fontsize{12}{12}\selectfont\textit{Master's Student in Machine Learning}} \\[0.3em]
         {\fontsize{11}{11}\selectfont Data Science / ML / RL / AI}
     \end{tabular}
     &
@@ -51,89 +54,89 @@
 
 %===== SUMMARY & SKILLS =====
 \noindent
-\begin{tabularx}{\textwidth}[t]{@{}p{0.48\textwidth}@{\hspace{2em}}p{0.48\textwidth}@{}}
+\begin{tabularx}{\textwidth}[t]{@{}p{0.45\textwidth}@{\hspace{2em}}p{0.51\textwidth}@{}}
   \parbox[t]{\linewidth}{
-    \makebox[0pt][l]{\textbf{\large ABOUT ME}}%
-    \hspace{7em}\rule{\dimexpr\linewidth-6em}{0.9pt} \\[1em]
-        Software engineering student specializing in machine learning and reinforcement learning, with experience applying ML to large-scale systems and real-world industrial problems (insurance pricing, predictive maintenance, semantic search). Passionate about building data-driven systems that bridge research and production.
+    \sechead{ABOUT ME}
+        Machine learning master's student with a software engineering background and internships in healthcare, insurance and media. Experienced in reinforcement learning, AI agents and large-scale semantic search.
   }
   &
   \parbox[t]{\linewidth}{
-    \makebox[0pt][l]{\textbf{\large SKILLS}}%
-    \hspace{6em}\rule{\dimexpr\linewidth-6.5em}{0.4pt} \\[1em]
-    \begin{tabular}{@{}p{2.5cm}p{\dimexpr\linewidth-3.2cm}@{}}
-      \textbf{Programming:} & Python, C++, Java, SQL, Bash, R \\[0.2em]
-      \textbf{ML / Data:} & PyTorch, Scikit-learn, TensorFlow, HuggingFace, MLflow \\[0.2em]
-      \textbf{Tools:} & Docker, Git, Airflow, Azure, Power BI, Jenkins, Databricks, Snowflake \\
-      \textbf{Languages:} & English, French, Russian, Spanish, Korean
+    \sechead{SKILLS}
+    \begin{tabular}{@{}p{2.5cm}>{\raggedright\arraybackslash}p{\dimexpr\linewidth-3.2cm}@{}}
+      \textbf{Programming:} & Python, SQL, C++, Java, Bash, R \\[0.2em]
+      \textbf{ML / Data:} & PyTorch, Scikit-learn, TensorFlow, \mbox{HuggingFace}, MLflow, RL, AI Agents \\[0.2em]
+      \textbf{Tools:} & Azure, Databricks, Snowflake, \mbox{Power BI}, \mbox{Airflow}, Docker, Git \\
+      \textbf{Languages:} & English, French, Russian, Spanish, \mbox{Korean}
     \end{tabular}
   }
 \end{tabularx}
 
 %===== EDUCATION =====
 \vspace{0.2em}
-\textbf{\large EDUCATION} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+\sechead{EDUCATION}
 
 \begin{tabularx}{\textwidth}{@{}p{3cm} X r@{}}
-    1/2026 -- 2/2027 & 
+    1/2026 -- 1/2028 & 
     \textbf{Professional Master's in Machine Learning} 
     & \textbf{\textit{University of Montreal / McGill  - MILA}} \\ 
-    % & GPA: 3.4 / 4.0 & 
-    & Present  & 
+    & GPA: 4.0 / 4.0 (in progress) & 
     Montreal, Canada \\[0.2em]
     
     9/2021 -- 12/2025 & \textbf{Bachelor of Software Engineering} & \textbf{\textit{Polytechnique Montreal}} \\
     & GPA: 3.4 / 4.0 & Montreal, Canada \\[0.2em]
     
     2/2025 -- 6/2025 & \textbf{Bachelor of Computer Engineering} & \textbf{\textit{Korea University College of Engineering}} \\
-    & Academic Exchange & Seoul, South Korea &
+    & Academic Exchange & Seoul, South Korea
 \end{tabularx}
 
 %===== EXPERIENCE =====
 \vspace{0.2em}
-\textbf{\large EXPERIENCE} \hspace{1em}\rule{\dimexpr\linewidth-8em}{0.4pt} \\[0em]
+\sechead{EXPERIENCE}
 
 \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
-    1/2026 -- 5/2026 & 
+    5/2026 -- 12/2026 &
+    \textbf{Data Science \& ML Intern} \hfill \textbf{\textit{McKesson}}\\[0.2em]
+    & \textbullet\ \hangindent=0.5em Developed AI agents used by 100+ team members to analyze business data and automate analytical workflows, saving hours of manual work. \\
+    & \textbullet\ \hangindent=0.5em Processed sensitive health data (PHI) via API integrations, prioritizing privacy and security. \\
+    & \textbullet\ \hangindent=0.5em Produced executive summaries from analytical findings to support decision-making. \\
+    & \texttt{Python / AI Agents / APIs / Azure / Snowflake / Power BI / Claude Code} \\[0.5em]
+
+    9/2025 -- 4/2026 & 
     \textbf{Data Scientist \& RL Intern} \hfill \textbf{\textit{Intact Insurance}}\\[0.2em]
-    & \textbullet\ \hangindent=0.5em Developed constrained RL pricing policies using adaptive primal--dual methods, validated through simulation and risk metrics, increasing long-term profitability while lowering volatility.  \\
-    & \texttt{Python / PyTorch / RL / CVaR / MLflow / Databricks / Snowflake / Risk Metrics} \\[0.5em]
-    
-    6/2025 -- 9/2025 & 
-    \textbf{Data Scientist \& ML Intern} \hfill \textbf{\textit{Pratt \& Whitney}}\\[0.2em]
-    & \textbullet\ \hangindent=0.5em Developed predictive models to estimate engine remaining useful life, enabling better maintenance planning and reducing unplanned downtime by 15\%.  \\
-    & \texttt{Python / Scikit-learn / PyTorch / Pandas / NumPy / MLflow / Jupyter} \\[0.5em]
+    & \textbullet\ \hangindent=0.5em Developed reinforcement learning pricing policies that improved simulated long-term profitability under regulatory and business constraints, using adaptive primal--dual optimization.\\
+    & \textbullet\ \hangindent=0.5em Validated policies in simulation on profitability, volatility and CVaR risk to guide pricing decisions.\\
+    & \texttt{Python / PyTorch / Reinforcement Learning / CVaR / MLflow / Databricks} \\[0.5em]
 
     5/2024 -- 9/2024 & \textbf{Data Scientist Intern} \hfill \textbf{\textit{Radio-Canada / CBC}} \\
-    & \textbullet\ \hangindent=0.5em Designed an AI-powered unified indexing system centralizing internal content sources for semantic and keyword-based document search (15 M+ elements and used by 100+ employees).\\
-    & \texttt{ELK / ETL / Airflow / Python / Azure AI Search / Hugging Face / Embeddings} \\[0.5em]
+    & \textbullet\ \hangindent=0.5em Designed an AI-powered indexing system unifying internal content sources for semantic and keyword search across 15M+ elements, used by 100+ employees.\\
+    & \texttt{Python / Azure AI Search / ELK / Airflow / Embeddings / Hugging Face} \\[0.5em]
 
     9/2023 -- 12/2023 & \textbf{Full-Stack Developer Intern} \hfill \textbf{\textit{Stingray}} \\
-    & \textbullet\ \hangindent=0.5em Applied analytics to drive improvements in an Agile setup with CI, testing, and code reviews. \\
+    & \textbullet\ \hangindent=0.5em Developed full-stack features in an Agile team, with analytics, automated testing, CI and code reviews. \\
     & \texttt{Next.js / React / Node.js / TypeScript} \\[0.5em]
 \end{tabularx}
 
 %===== PROJECTS =====
 \vspace{0.2em}
-\textbf{\large PROJECTS} \hspace{1em}\rule{\dimexpr\linewidth-7em}{0.4pt} \\[0em]
+\sechead{PROJECTS}
 
 \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
     Personal Project & \textbf{GravityGuyML — Reinforcement Learning Side-Scroller} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub}}} \\
     & \textbullet\ \hangindent=0.5em Built a Gymnasium-compatible Pygame environment with procedural generation and deep RL agents (\texttt{DQN}, \texttt{PPO}, \texttt{SAC}, \texttt{A2C}). \\
-    & \texttt{Python / Machine Learning / Deep Learning / Reinforcement Learning / TensorFlow} \\[0.5em]
+    & \texttt{Python / Deep RL / Gymnasium / TensorFlow / Pygame} \\[0.5em]
 
     Personal Project & \textbf{Quantitative Finance Notes — Monte Carlo \& GBM Modeling} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/Quant-Finance-Learning-Notes}{GitHub}}} \\
     & \textbullet\ \hangindent=0.5em Built reproducible notebooks on stochastic processes, Monte Carlo simulations, and Geometric Brownian Motion for market modeling and data calibration. \\
-    & \texttt{Python / NumPy / Pandas / Matplotlib / Monte Carlo / Quantitative Finance / GBM} \\[0.5em]
+    & \texttt{Python / NumPy / Pandas / Monte Carlo / GBM} \\[0.5em]
 
     Academic Project & \textbf{Weather-Based Disease Outbreak Prediction} \hfill \textbf{\textit{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}} \\
     & \textbullet\ \hangindent=0.5em Predicted outbreaks from climate data using classification models (Logistic Regression, SVM, Decision Trees) with F1-score and AUC-ROC evaluation. \\
-    & \texttt{Python / Jupyter / pandas / scikit-learn / Matplotlib / FP-Growth} \\[0.5em]
+    & \texttt{Python / scikit-learn / pandas / FP-Growth} \\[0.5em]
 \end{tabularx}
 
 %===== EXTRACURRICULAR =====
 \vspace{0.2em}
-\textbf{\large EXTRACURRICULAR ACTIVITIES} \hspace{1em}\rule{\dimexpr\linewidth-22em}{0.4pt} \\[0.2em]
+\sechead{EXTRACURRICULAR ACTIVITIES}
 
 \begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
     1/2024 -- 8/2024 & \textbf{Teaching Assistant -- Discrete Mathematics} \hfill \textbf{\textit{Polytechnique Montreal}} \\
