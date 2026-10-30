@@ -20,6 +20,13 @@ All three fit on **one page** at 9.5 pt (the quant variant uses 10 pt).
 - Bullets use a hanging indent (`\bul` macro): the bullet is inset and wrapped lines align under the text.
 - README rewritten without emojis and with accurate file descriptions.
 
+## Numbers added (sources)
+
+- Intact: "10+ constraints" and "millions of records" are approximate figures given by the author; keep them conservative.
+- McKesson: "dozens of agents" (author's recollection); "100+ users"; "10 hours per week per user" is an estimate.
+- Weather project: 11 classes, about 5,000 records, XGBoost accuracy 0.977, macro F1 0.98, macro one-vs-rest ROC-AUC 0.9998 (notebook `03_Classification.ipynb`, held-out set of 997 rows).
+- ApplyPilot: 380+ automated tests (public release 0.6.0 count; the repository's newer local work has more).
+
 ## To confirm
 
 - **GPA 3.7 (Polytechnique):** an unofficial transcript seen earlier showed a lower cumulative figure. Check it against the official transcript before sending, since some employers ask for it.
