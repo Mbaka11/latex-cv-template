@@ -16,9 +16,10 @@ The one-page CV I use for internship applications, written in LaTeX. The reposit
 
 | Path | What it is |
 | --- | --- |
-| `Marsel_Bakashov_CV_EN/main.tex` | English CV |
-| `Marsel_Bakashov_CV_FR/main.tex` | French CV |
-| `Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of the two versions |
+| `template/main.tex` | Blank template with placeholders, start here |
+| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | My English CV |
+| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | My French CV |
+| `my-cv/Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of my two CVs |
 
 ## Layout
 
@@ -32,7 +33,7 @@ The one-page CV I use for internship applications, written in LaTeX. The reposit
 You need a LaTeX distribution with the `roboto` and `fontawesome5` packages (MiKTeX and TeX Live both have them).
 
 ```bash
-cd template-1/Marsel_Bakashov_CV_EN
+cd template-1/template
 pdflatex main.tex
 ```
 
@@ -41,7 +42,7 @@ You can also upload the folder to [Overleaf](https://www.overleaf.com) and compi
 ## Reuse
 
 1. Fork or clone the repository.
-2. Pick a template folder, then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
+2. Copy `template-1/template/` (or another template folder), then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
 3. Remove any section you do not need.
 4. Recompile and check that the result still fits on one page.
 
@@ -67,16 +68,17 @@ Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. 
 
 | Chemin | Description |
 | --- | --- |
-| `Marsel_Bakashov_CV_EN/main.tex` | CV en anglais |
-| `Marsel_Bakashov_CV_FR/main.tex` | CV en français |
-| `Marsel_Bakashov_CV_*.pdf` | PDF compilés des deux versions |
+| `template/main.tex` | Template vide avec des placeholders, point de départ |
+| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | Mon CV en anglais |
+| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | Mon CV en français |
+| `my-cv/Marsel_Bakashov_CV_*.pdf` | PDF compilés de mes deux CV |
 
 ## Compilation
 
 Il faut une distribution LaTeX avec les paquets `roboto` et `fontawesome5` (MiKTeX et TeX Live les incluent).
 
 ```bash
-cd template-1/Marsel_Bakashov_CV_FR
+cd template-1/template
 pdflatex main.tex
 ```
 
@@ -85,7 +87,7 @@ Le dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
 ## Réutilisation
 
 1. Copiez ou clonez le dépôt.
-2. Choisissez un dossier de template, puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
+2. Copiez `template-1/template/` (ou un autre dossier de template), puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
 3. Supprimez les sections inutiles.
 4. Recompilez et vérifiez que le CV tient toujours sur une page.
 
