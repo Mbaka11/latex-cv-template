@@ -1,10 +1,18 @@
 # LaTeX CV
 
-The one-page CV I use for internship applications, written in LaTeX. Fork it and replace the content with your own to reuse the layout.
+The one-page CV I use for internship applications, written in LaTeX. The repository holds two templates: the original one and an updated one. Fork it, pick a template and replace the content with your own.
 
 [Version française plus bas](#cv-latex-en-français)
 
-## Contents
+## Templates
+
+| Folder | What it is |
+| --- | --- |
+| `template-1/` | Original template (current CV) |
+| `template-2/` | Updated template, built from a new resume (in progress) |
+| `temp/` | Local scratch folder, git-ignored (source resumes, drafts) |
+
+### `template-1/`
 
 | Path | What it is |
 | --- | --- |
@@ -26,7 +34,7 @@ The one-page CV I use for internship applications, written in LaTeX. Fork it and
 You need a LaTeX distribution with the `roboto` and `fontawesome5` packages (MiKTeX and TeX Live both have them).
 
 ```bash
-cd Marsel_Bakashov_CV_EN
+cd template-1/Marsel_Bakashov_CV_EN
 pdflatex main.tex
 ```
 
@@ -35,7 +43,7 @@ You can also upload the folder to [Overleaf](https://www.overleaf.com) and compi
 ## Reuse
 
 1. Fork or clone the repository.
-2. In `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
+2. Pick a template folder, then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
 3. Remove any section you do not need.
 4. Recompile and check that the result still fits on one page.
 
@@ -47,9 +55,17 @@ MIT License.
 
 # CV LaTeX en français
 
-Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. Faites-en une copie et remplacez le contenu par le vôtre pour réutiliser la mise en page.
+Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. Le dépôt contient deux templates : l'original et une version mise à jour. Faites-en une copie, choisissez un template et remplacez le contenu par le vôtre.
 
-## Contenu
+## Templates
+
+| Dossier | Description |
+| --- | --- |
+| `template-1/` | Template original (CV actuel) |
+| `template-2/` | Template mis à jour, construit à partir d'un nouveau CV (en cours) |
+| `temp/` | Dossier de travail local, ignoré par git (CV sources, brouillons) |
+
+### `template-1/`
 
 | Chemin | Description |
 | --- | --- |
@@ -64,7 +80,7 @@ Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. 
 Il faut une distribution LaTeX avec les paquets `roboto` et `fontawesome5` (MiKTeX et TeX Live les incluent).
 
 ```bash
-cd Marsel_Bakashov_CV_FR
+cd template-1/Marsel_Bakashov_CV_FR
 pdflatex main.tex
 ```
 
@@ -73,7 +89,7 @@ Le dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
 ## Réutilisation
 
 1. Copiez ou clonez le dépôt.
-2. Dans `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
+2. Choisissez un dossier de template, puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
 3. Supprimez les sections inutiles.
 4. Recompilez et vérifiez que le CV tient toujours sur une page.
 
