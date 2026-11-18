@@ -19,7 +19,6 @@ The one-page CV I use for internship applications, written in LaTeX. The reposit
 | `Marsel_Bakashov_CV_EN/main.tex` | English CV |
 | `Marsel_Bakashov_CV_FR/main.tex` | French CV |
 | `Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of the two versions |
-| `CV_REVISION_NOTES.md` | Working notes on wording choices and open items |
 
 ## Layout
 
@@ -71,7 +70,6 @@ Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. 
 | `Marsel_Bakashov_CV_EN/main.tex` | CV en anglais |
 | `Marsel_Bakashov_CV_FR/main.tex` | CV en français |
 | `Marsel_Bakashov_CV_*.pdf` | PDF compilés des deux versions |
-| `CV_REVISION_NOTES.md` | Notes de travail sur la rédaction et les points à confirmer |
 
 ## Compilation
 
