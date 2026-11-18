@@ -18,17 +18,18 @@
 \newlength{\cvindent}\setlength{\cvindent}{7pt}
 
 % Section heading: bold small caps, rule right under it
-\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{1.5pt}\hrule height 0.4pt\vspace{5pt}}
+\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{3pt}\hrule height 0.4pt\vspace{7pt}}
 % Row: left text, right text, inset by \cvindent (cvrowin also insets the right side)
 \newcommand{\cvrow}[2]{\noindent\hspace{\cvindent}#1\hfill #2\par}
 \newcommand{\cvrowin}[2]{\noindent\hspace{\cvindent}#1\hfill #2\hspace{\cvindent}\par}
-% One bullet: bullet glued to the text, wrapped lines return to the bullet
-\newcommand{\cvb}[1]{{\fontsize{9.5}{10.8}\selectfont\leftskip=2\cvindent\noindent\textbullet\,#1\par}}
+% One bullet: bullet glued to the text, wrapped lines align under the text
+\newlength{\cvbw}
+\newcommand{\cvb}[1]{{\fontsize{9.5}{11.4}\selectfont\settowidth{\cvbw}{\textbullet\,}\hangindent=\dimexpr2\cvindent+\cvbw\relax\hangafter=1\noindent\hspace{2\cvindent}\textbullet\,#1\par}}
 % Space after an entry
 \newcommand{\cvgap}{\vspace{4pt}}
 
 \begin{document}
-\fontsize{10.5}{12}\selectfont
+\fontsize{10.5}{12.6}\selectfont
 
 %=========== HEADER ===========
 \begin{center}
@@ -43,7 +44,7 @@ Machine learning engineer with \textbf{4 internships} building AI systems, from 
 
 %=========== EDUCATION ===========
 \cvsection{Education}
-\cvrowin{\textbf{University of Montreal / McGill \textendash\ Mila}}{Montreal, QC}
+\cvrowin{\textbf{Mila \textendash\ Quebec AI Institute}}{Montreal, QC}
 \cvrowin{\textit{Professional M.S. in Machine Learning, GPA 4.0 / 4.0}}{\textit{Jan 2026 \textendash\ Jan 2028}}
 \cvrowin{\textbf{Polytechnique Montreal}}{Montreal, QC}
 \cvrowin{\textit{B.S. in Software Engineering, GPA 3.7 / 4.0}}{\textit{Sep 2021 \textendash\ Dec 2025}}
@@ -54,7 +55,7 @@ Machine learning engineer with \textbf{4 internships} building AI systems, from 
 \cvsection{Experience}
 \cvrow{\textbf{Data Science \& ML Intern} \sep \textit{McKesson}}{\textit{May 2026 \textendash\ Dec 2026 \sep Montreal, QC}}
 \cvb{\textbf{Developed} AI agents used by \textbf{100+ team members} to analyze business data and generate executive summaries, saving an estimated \textbf{10 hours per week per user}.}
-\cvb{\textbf{Built} orchestrated multi-agent workflows at scale, where \textbf{dozens of agents} with dedicated tools and skills process data in sequence and pass results to one another.}
+\cvb{\textbf{Built} orchestrated multi-agent workflows at scale, where \textbf{dozens of agents} with dedicated tools and skills pass results along.}
 \cvb{\textbf{Processed} sensitive health data (PHI) via API integrations, prioritizing privacy and security.}
 \cvgap
 \cvrow{\textbf{Data Scientist \& RL Intern} \sep \textit{Intact Insurance}}{\textit{Sep 2025 \textendash\ Apr 2026 \sep Montreal, QC}}
@@ -82,22 +83,19 @@ Machine learning engineer with \textbf{4 internships} building AI systems, from 
 \cvgap
 \cvrow{\textbf{Panoptes-Laplace} \sep \textit{Python \textemdash\ Ontology \textemdash\ Data Privacy \textemdash\ iOS}}{\href{https://github.com/Mbaka11/Panoptes-Laplace}{GitHub} \sep \textit{2026}}
 \cvb{\textbf{Designing} an open-source, consent-based personal intelligence platform that connects authorized personal data into an explorable \textbf{temporal ontology}.}
-\cvb{\textbf{Prototyped} a privacy-report inspector with source provenance and coverage reports, covered by tests.}
 \cvgap
 \cvrow{\textbf{ECG-AI-KG} \sep \textit{Python \textemdash\ Medical AI \textemdash\ Decision Support}}{\href{https://github.com/Mbaka11/ECG-AI-KG}{GitHub} \sep \textit{2026}}
 \cvb{\textbf{Researching} an AI tool that digitizes a smartphone photo of a paper ECG and flags suspected \textbf{life-threatening patterns} with an urgency level, for remote primary care in Kyrgyzstan.}
-\cvb{\textbf{Completed} the research phase and prepared the plan and EN/FR specifications; decision support only.}
 \cvgap
 \cvrow{\textbf{GravityGuyML} \sep \textit{Python \textemdash\ Deep RL \textemdash\ Gymnasium \textemdash\ TensorFlow \textemdash\ Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub} \sep \textit{2025}}
 \cvb{\textbf{Built} a Gymnasium-compatible Pygame environment with procedural generation and deep RL agents (\textbf{DQN, PPO, SAC, A2C}).}
-\cvb{\textbf{Added} deterministic seeds and episode replay for reproducible training and evaluation on held-out seeds.}
 \cvgap
 
 %=========== SKILLS ===========
 \cvsection{Skills}
 \hspace{\cvindent}\textbf{Programming}: Python, SQL, C++, Java, Bash, R\par
 \hspace{\cvindent}\textbf{ML / Data}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, Reinforcement Learning, AI Agents\par
-\hspace{\cvindent}\textbf{Tools}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\par
+\hspace{\cvindent}\textbf{Cloud \& Tools}: Azure, Databricks, Snowflake, Power BI, Airflow, REST APIs, Docker, Git\par
 \hspace{\cvindent}\textbf{Languages}: English, French, Russian, Spanish, Korean\par
 
 \end{document}

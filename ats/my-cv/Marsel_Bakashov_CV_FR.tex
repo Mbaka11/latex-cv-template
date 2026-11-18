@@ -18,17 +18,18 @@
 \newlength{\cvindent}\setlength{\cvindent}{7pt}
 
 % Section heading: bold small caps, rule right under it
-\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{1.5pt}\hrule height 0.4pt\vspace{5pt}}
+\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{3pt}\hrule height 0.4pt\vspace{7pt}}
 % Row: left text, right text, inset by \cvindent (cvrowin also insets the right side)
 \newcommand{\cvrow}[2]{\noindent\hspace{\cvindent}#1\hfill #2\par}
 \newcommand{\cvrowin}[2]{\noindent\hspace{\cvindent}#1\hfill #2\hspace{\cvindent}\par}
-% One bullet: bullet glued to the text, wrapped lines return to the bullet
-\newcommand{\cvb}[1]{{\fontsize{9.5}{10.8}\selectfont\leftskip=2\cvindent\noindent\textbullet\,#1\par}}
+% One bullet: bullet glued to the text, wrapped lines align under the text
+\newlength{\cvbw}
+\newcommand{\cvb}[1]{{\fontsize{9.5}{11.4}\selectfont\settowidth{\cvbw}{\textbullet\,}\hangindent=\dimexpr2\cvindent+\cvbw\relax\hangafter=1\noindent\hspace{2\cvindent}\textbullet\,#1\par}}
 % Space after an entry
 \newcommand{\cvgap}{\vspace{4pt}}
 
 \begin{document}
-\fontsize{10.5}{12}\selectfont
+\fontsize{10.5}{12.6}\selectfont
 
 %=========== EN-TÊTE ===========
 \begin{center}
@@ -43,7 +44,7 @@ Ingénieur en apprentissage automatique avec \textbf{4 stages} en systèmes mult
 
 %=========== ÉDUCATION ===========
 \cvsection{Éducation}
-\cvrowin{\textbf{Université de Montréal / McGill \textendash\ Mila}}{Montréal, QC}
+\cvrowin{\textbf{Mila \textendash\ Institut québécois d'IA}}{Montréal, QC}
 \cvrowin{\textit{Maîtrise professionnelle en apprentissage automatique, GPA 4,0 / 4,0}}{\textit{janv. 2026 \textendash\ janv. 2028}}
 \cvrowin{\textbf{Polytechnique Montréal}}{Montréal, QC}
 \cvrowin{\textit{B.Ing. en génie logiciel, GPA 3,7 / 4,0}}{\textit{sept. 2021 \textendash\ déc. 2025}}
@@ -82,22 +83,19 @@ Ingénieur en apprentissage automatique avec \textbf{4 stages} en systèmes mult
 \cvgap
 \cvrow{\textbf{Panoptes-Laplace} \sep \textit{Python \textemdash\ Ontologie \textemdash\ Vie privée \textemdash\ iOS}}{\href{https://github.com/Mbaka11/Panoptes-Laplace}{GitHub} \sep \textit{2026}}
 \cvb{\textbf{Conçoit} une plateforme open source d'intelligence personnelle fondée sur le consentement, reliant des données autorisées en une \textbf{ontologie temporelle}.}
-\cvb{\textbf{Prototypé} un inspecteur de rapports de confidentialité avec provenance des sources et rapports de couverture.}
 \cvgap
 \cvrow{\textbf{ECG-AI-KG} \sep \textit{Python \textemdash\ IA médicale \textemdash\ Aide à la décision}}{\href{https://github.com/Mbaka11/ECG-AI-KG}{GitHub} \sep \textit{2026}}
 \cvb{\textbf{Recherche} un outil d'IA qui numérise la photo d'un ECG papier et signale des \textbf{rythmes potentiellement mortels}, pour les soins primaires isolés au Kirghizistan.}
-\cvb{\textbf{Terminé} la phase de recherche et préparé le plan et les spécifications EN/FR ; aide à la décision seulement.}
 \cvgap
 \cvrow{\textbf{GravityGuyML} \sep \textit{Python \textemdash\ RL profond \textemdash\ Gymnasium \textemdash\ TensorFlow \textemdash\ Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub} \sep \textit{2025}}
 \cvb{\textbf{Conçu} un environnement Pygame compatible Gymnasium avec génération procédurale et agents RL profond (\textbf{DQN, PPO, SAC, A2C}).}
-\cvb{\textbf{Ajouté} des graines déterministes et la relecture d'épisodes pour un entraînement et une évaluation reproductibles.}
 \cvgap
 
 %=========== COMPÉTENCES ===========
 \cvsection{Compétences}
 \hspace{\cvindent}\textbf{Langages}: Python, SQL, C++, Java, Bash, R\par
 \hspace{\cvindent}\textbf{ML / Données}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, apprentissage par renforcement, agents IA\par
-\hspace{\cvindent}\textbf{Outils}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\par
+\hspace{\cvindent}\textbf{Cloud et outils}: Azure, Databricks, Snowflake, Power BI, Airflow, API REST, Docker, Git\par
 \hspace{\cvindent}\textbf{Langues}: anglais, français, russe, espagnol, coréen\par
 
 \end{document}
