@@ -1,110 +1,103 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[french]{babel}
-\usepackage{enumitem}
-\usepackage[left=1.4cm,right=1.4cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[left=0.45in,right=0.45in,top=0.35in,bottom=0.35in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[sfdefault,light]{roboto}
+\usepackage[sfdefault]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=1.5em
 \definecolor{linkcolor}{HTML}{1A73E8}
 \hypersetup{colorlinks=true, urlcolor=linkcolor}
 
-% Separator used in the contact line and in titles
 \newcommand{\sep}{\textbar\ }
-% Section heading: bold caps with a rule under it
-\newcommand{\cvsection}[1]{\vspace{0.55em}\noindent{\textbf{\MakeUppercase{#1}}}\par\vspace{-0.4em}\noindent\rule{\linewidth}{0.4pt}\par\vspace{0.25em}}
-% Left text, right text on one line
-\newcommand{\cvrow}[2]{\noindent #1\hfill #2\par}
-% Bulleted list
-\newenvironment{cvlist}{\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet]}{\end{itemize}\vspace{0.3em}}
+\newlength{\cvindent}\setlength{\cvindent}{7pt}
+
+% Section heading: bold small caps, rule right under it
+\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{1.5pt}\hrule height 0.4pt\vspace{5pt}}
+% Row: left text, right text, inset by \cvindent (cvrowin also insets the right side)
+\newcommand{\cvrow}[2]{\noindent\hspace{\cvindent}#1\hfill #2\par}
+\newcommand{\cvrowin}[2]{\noindent\hspace{\cvindent}#1\hfill #2\hspace{\cvindent}\par}
+% One bullet: bullet glued to the text, wrapped lines return to the bullet
+\newcommand{\cvb}[1]{{\fontsize{9.5}{10.8}\selectfont\leftskip=2\cvindent\noindent\textbullet\,#1\par}}
+% Space after an entry
+\newcommand{\cvgap}{\vspace{4pt}}
 
 \begin{document}
-\fontsize{10}{12}\selectfont
+\fontsize{10.5}{12}\selectfont
 
 %=========== EN-TÊTE ===========
 \begin{center}
-  {\fontsize{22}{24}\selectfont\textbf{Marsel Bakashov}}\\[0.3em]
-  +1 (514) 664-9320 \sep \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \sep \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{LinkedIn} \sep \href{https://github.com/Mbaka11}{github.com/Mbaka11} \sep \href{https://marselbak.netlify.app/}{Portfolio}
+  {\fontsize{26}{28}\selectfont\textbf{Marsel Bakashov}}\par\vspace{2pt}
+  {\small +1 (514) 664-9320 \sep \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \sep \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{linkedin.com/in/marsel-bakashov} \sep \href{https://github.com/Mbaka11}{github.com/Mbaka11} \sep \href{https://marselbak.netlify.app/}{Portfolio}}
 \end{center}
-\vspace{-0.6em}
+\vspace{-8pt}
 
 %=========== RÉSUMÉ ===========
 \cvsection{Résumé}
-Étudiant à la maîtrise en \textbf{apprentissage automatique} (Mila), avec des stages en \textbf{systèmes multi-agents}, \textbf{apprentissage par renforcement} et \textbf{recherche}. J'aime transformer l'apprentissage automatique en outils réellement utilisés, surtout là où les idées doivent résister aux vraies données, contraintes et utilisateurs. J'apprends en construisant, et j'aime enseigner et organiser. Je cherche un stage où prendre un problème en charge de bout en bout, avec de fortes équipes.
+Ingénieur en apprentissage automatique avec \textbf{4 stages} en systèmes multi-agents, apprentissage par renforcement et recherche. Étudiant à la maîtrise à \textbf{MILA (apprentissage automatique)}, j'aime transformer l'apprentissage automatique en outils réellement utilisés. Je cherche un stage où prendre un problème en charge de bout en bout.
 
 %=========== ÉDUCATION ===========
 \cvsection{Éducation}
-\cvrow{\textbf{Université de Montréal / McGill -- Mila}}{Montréal, Canada}
-\cvrow{\textit{Maîtrise pro en apprentissage automatique, GPA 4.0 / 4.0}}{\textit{Jan. 2026 -- Jan. 2028}}
-\vspace{0.2em}
-\cvrow{\textbf{Polytechnique Montréal}}{Montréal, Canada}
-\cvrow{\textit{Baccalauréat en génie logiciel, GPA 3.7 / 4.0}}{\textit{Sept. 2021 -- Déc. 2025}}
-\vspace{0.2em}
-\cvrow{\textbf{Korea University College of Engineering}}{Séoul, Corée du Sud}
-\cvrow{\textit{Baccalauréat en génie informatique (échange académique)}}{\textit{Fév. 2025 -- Juin 2025}}
+\cvrowin{\textbf{Université de Montréal / McGill \textendash\ Mila}}{Montréal, QC}
+\cvrowin{\textit{Maîtrise professionnelle en apprentissage automatique, GPA 4,0 / 4,0}}{\textit{janv. 2026 \textendash\ janv. 2028}}
+\cvrowin{\textbf{Polytechnique Montréal}}{Montréal, QC}
+\cvrowin{\textit{B.Ing. en génie logiciel, GPA 3,7 / 4,0}}{\textit{sept. 2021 \textendash\ déc. 2025}}
+\cvrowin{\textbf{Korea University}}{Séoul, Corée du Sud}
+\cvrowin{\textit{B.Ing. en génie informatique (échange académique)}}{\textit{févr. 2025 \textendash\ juin 2025}}
 
 %=========== EXPÉRIENCE ===========
 \cvsection{Expérience}
-\cvrow{\textbf{Stagiaire en science des données et ML} \sep \textit{McKesson}}{Mai 2026 -- Déc. 2026}
-\begin{cvlist}
-  \item \textbf{Développé} des agents IA utilisés par \textbf{plus de 100 personnes} pour analyser les données d'affaires et générer des synthèses, économisant environ \textbf{10 h par semaine par utilisateur} (estimé).
-  \item \textbf{Conçu} à grande échelle des workflows multi-agents orchestrés : des dizaines d'agents dotés d'outils et de compétences dédiés traitent les données à la chaîne en se passant leurs résultats.
-  \item \textbf{Traité} des données de santé sensibles (PHI) via des API, en priorisant confidentialité et sécurité.
-\end{cvlist}
-
-\cvrow{\textbf{Stagiaire en science des données et RL} \sep \textit{Intact Assurance}}{Sept. 2025 -- Avr. 2026}
-\begin{cvlist}
-  \item \textbf{Développé} des politiques de tarification par apprentissage par renforcement qui améliorent la rentabilité à long terme en simulation, sous \textbf{plus de 10 contraintes} réglementaires et d'affaires.
-  \item \textbf{Validé} les politiques en simulation sur des \textbf{millions d'enregistrements} (rentabilité, volatilité, CVaR).
-\end{cvlist}
-
-\cvrow{\textbf{Stagiaire en science des données} \sep \textit{Radio-Canada / CBC}}{Mai 2024 -- Sept. 2024}
-\begin{cvlist}
-  \item \textbf{Conçu} un système d'indexation basé sur l'IA unifiant les sources de contenu internes pour la recherche sémantique et lexicale sur \textbf{plus de 15 M d'éléments}, utilisé par \textbf{plus de 100 employés}.
-\end{cvlist}
-
-\cvrow{\textbf{Développeur full-stack stagiaire} \sep \textit{Stingray}}{Sept. 2023 -- Déc. 2023}
-\begin{cvlist}
-  \item \textbf{Développé} des fonctionnalités full-stack en équipe agile : analytique, tests, CI et revues de code.
-\end{cvlist}
-
-\cvrow{\textbf{Assistant d'enseignement, mathématiques discrètes} \sep \textit{Polytechnique Montréal}}{Jan. 2024 -- Août 2024}
-\begin{cvlist}
-  \item \textbf{Animé} des révisions, corrigé des devoirs et soutenu \textbf{80+ étudiants} en logique et graphes.
-\end{cvlist}
-
-\cvrow{\textbf{Directeur des commandites} \sep \textit{PolyAI Hackathon}}{Jan. 2024 -- Mai 2024}
-\begin{cvlist}
-  \item \textbf{Obtenu} \textbf{22\,000\,\$} en financement et dirigé une équipe de commandites avec réunions.
-\end{cvlist}
+\cvrow{\textbf{Stagiaire en science des données et ML} \sep \textit{McKesson}}{\textit{mai 2026 \textendash\ déc. 2026 \sep Montréal, QC}}
+\cvb{\textbf{Développé} des agents IA utilisés par \textbf{plus de 100 personnes} pour analyser les données d'affaires et générer des synthèses, économisant environ \textbf{10 h par semaine par utilisateur} (estimé).}
+\cvb{\textbf{Conçu} des workflows multi-agents orchestrés à grande échelle : \textbf{des dizaines d'agents} dotés d'outils et de compétences dédiés se passent leurs résultats.}
+\cvb{\textbf{Traité} des données de santé sensibles (PHI) via des API, en priorisant confidentialité et sécurité.}
+\cvgap
+\cvrow{\textbf{Stagiaire en science des données et RL} \sep \textit{Intact Assurance}}{\textit{sept. 2025 \textendash\ avr. 2026 \sep Montréal, QC}}
+\cvb{\textbf{Développé} des politiques de tarification par apprentissage par renforcement, plus rentables à long terme en simulation sous \textbf{10+ contraintes réglementaires et d'affaires}.}
+\cvb{\textbf{Validé} les politiques en simulation sur \textbf{des millions d'enregistrements} (rentabilité, volatilité, CVaR).}
+\cvgap
+\cvrow{\textbf{Stagiaire en science des données} \sep \textit{Radio-Canada / CBC}}{\textit{mai 2024 \textendash\ sept. 2024 \sep Montréal, QC}}
+\cvb{\textbf{Conçu} un système d'indexation IA pour la recherche sémantique et lexicale sur \textbf{15 M+ d'éléments}, utilisé par \textbf{100+ employés}.}
+\cvgap
+\cvrow{\textbf{Développeur full-stack stagiaire} \sep \textit{Stingray}}{\textit{sept. 2023 \textendash\ déc. 2023 \sep Montréal, QC}}
+\cvb{\textbf{Développé} des fonctionnalités full-stack en équipe agile : analytique, tests, CI et revues de code.}
+\cvgap
+\cvrow{\textbf{Assistant d'enseignement, Mathématiques discrètes} \sep \textit{Polytechnique Montréal}}{\textit{janv. 2024 \textendash\ août 2024 \sep Montréal, QC}}
+\cvb{\textbf{Animé} des révisions, corrigé des devoirs et soutenu \textbf{plus de 80 étudiants}.}
+\cvgap
+\cvrow{\textbf{Directeur des commandites} \sep \textit{PolyAI Hackathon}}{\textit{janv. 2024 \textendash\ mai 2024 \sep Montréal, QC}}
+\cvb{\textbf{Obtenu} \textbf{22\,000\,\$} en financement et dirigé une équipe de commandites avec réunions.}
+\cvgap
 
 %=========== PROJETS ===========
 \cvsection{Projets}
-\cvrow{\textbf{ApplyPilot} \sep \textit{JavaScript --- Node.js --- Extension Chrome --- LLM}}{\href{https://github.com/Mbaka11/ApplyPilot}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Conçu} une extension Chrome et un serveur local qui analysent l'offre, choisissent le CV, rédigent la lettre avec un LLM et remplissent les formulaires, avec \textbf{plus de 380 tests} ; l'utilisateur envoie.
-\end{cvlist}
-
-\cvrow{\textbf{GravityGuyML} \sep \textit{Python --- RL profond --- Gymnasium --- TensorFlow --- Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Conçu} un environnement Pygame compatible avec Gymnasium, intégrant une génération procédurale et des agents d'apprentissage profond (DQN, PPO, SAC, A2C).
-\end{cvlist}
-
-\cvrow{\textbf{Prévision d'épidémies à partir de données climatiques} \sep \textit{Python --- scikit-learn --- XGBoost}}{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Prédit} 11 diagnostics à partir de symptômes et de données météo (environ 5\,000 cas) avec KNN, SVM et XGBoost, pour un \textbf{F1 macro de 0,98} et un \textbf{AUC-ROC de 0,999}.
-\end{cvlist}
+\cvrow{\textbf{ApplyPilot} \sep \textit{JavaScript \textemdash\ Node.js \textemdash\ Extension Chrome \textemdash\ LLM}}{\href{https://github.com/Mbaka11/ApplyPilot}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Conçu} une extension Chrome et un serveur local qui trouvent des offres, choisissent le CV et remplissent les formulaires Workday et SuccessFactors ; l'utilisateur envoie.}
+\cvb{\textbf{Rédigé} des lettres de motivation d'une page avec un LLM et suivi les candidatures avec des statistiques, avec \textbf{380+ tests}.}
+\cvgap
+\cvrow{\textbf{Panoptes-Laplace} \sep \textit{Python \textemdash\ Ontologie \textemdash\ Vie privée \textemdash\ iOS}}{\href{https://github.com/Mbaka11/Panoptes-Laplace}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Conçoit} une plateforme open source d'intelligence personnelle fondée sur le consentement, reliant des données autorisées en une \textbf{ontologie temporelle}.}
+\cvb{\textbf{Prototypé} un inspecteur de rapports de confidentialité avec provenance des sources et rapports de couverture.}
+\cvgap
+\cvrow{\textbf{ECG-AI-KG} \sep \textit{Python \textemdash\ IA médicale \textemdash\ Aide à la décision}}{\href{https://github.com/Mbaka11/ECG-AI-KG}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Recherche} un outil d'IA qui numérise la photo d'un ECG papier et signale des \textbf{rythmes potentiellement mortels}, pour les soins primaires isolés au Kirghizistan.}
+\cvb{\textbf{Terminé} la phase de recherche et préparé le plan et les spécifications EN/FR ; aide à la décision seulement.}
+\cvgap
+\cvrow{\textbf{GravityGuyML} \sep \textit{Python \textemdash\ RL profond \textemdash\ Gymnasium \textemdash\ TensorFlow \textemdash\ Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub} \sep \textit{2025}}
+\cvb{\textbf{Conçu} un environnement Pygame compatible Gymnasium avec génération procédurale et agents RL profond (\textbf{DQN, PPO, SAC, A2C}).}
+\cvb{\textbf{Ajouté} des graines déterministes et la relecture d'épisodes pour un entraînement et une évaluation reproductibles.}
+\cvgap
 
 %=========== COMPÉTENCES ===========
 \cvsection{Compétences}
-\textbf{Langages}~: Python, SQL, C++, Java, Bash, R\\
-\textbf{ML / Données}~: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, apprentissage par renforcement, agents IA\\
-\textbf{Outils}~: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\\
-\textbf{Langues}~: anglais, français, russe, espagnol, coréen
+\hspace{\cvindent}\textbf{Langages}: Python, SQL, C++, Java, Bash, R\par
+\hspace{\cvindent}\textbf{ML / Données}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, apprentissage par renforcement, agents IA\par
+\hspace{\cvindent}\textbf{Outils}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\par
+\hspace{\cvindent}\textbf{Langues}: anglais, français, russe, espagnol, coréen\par
 
 \end{document}

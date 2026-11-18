@@ -1,80 +1,77 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage[left=1.4cm,right=1.4cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[left=0.45in,right=0.45in,top=0.35in,bottom=0.35in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[sfdefault,light]{roboto}
+\usepackage[sfdefault]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=1.5em
 \definecolor{linkcolor}{HTML}{1A73E8}
 \hypersetup{colorlinks=true, urlcolor=linkcolor}
 
-% Separator used in the contact line and in titles
 \newcommand{\sep}{\textbar\ }
-% Section heading: bold caps with a rule under it
-\newcommand{\cvsection}[1]{\vspace{0.55em}\noindent{\textbf{\MakeUppercase{#1}}}\par\vspace{-0.4em}\noindent\rule{\linewidth}{0.4pt}\par\vspace{0.25em}}
-% Left text, right text on one line
-\newcommand{\cvrow}[2]{\noindent #1\hfill #2\par}
-% Bulleted list
-\newenvironment{cvlist}{\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet]}{\end{itemize}\vspace{0.3em}}
+\newlength{\cvindent}\setlength{\cvindent}{7pt}
+
+% Section heading: bold small caps, rule right under it
+\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{1.5pt}\hrule height 0.4pt\vspace{5pt}}
+% Row: left text, right text, inset by \cvindent (cvrowin also insets the right side)
+\newcommand{\cvrow}[2]{\noindent\hspace{\cvindent}#1\hfill #2\par}
+\newcommand{\cvrowin}[2]{\noindent\hspace{\cvindent}#1\hfill #2\hspace{\cvindent}\par}
+% One bullet: bullet glued to the text, wrapped lines return to the bullet
+\newcommand{\cvb}[1]{{\fontsize{9.5}{10.8}\selectfont\leftskip=2\cvindent\noindent\textbullet\,#1\par}}
+% Space after an entry
+\newcommand{\cvgap}{\vspace{4pt}}
 
 \begin{document}
-\fontsize{10}{12}\selectfont
+\fontsize{10.5}{12}\selectfont
 
 %=========== HEADER ===========
 \begin{center}
-  {\fontsize{22}{24}\selectfont\textbf{First Last Name}}\\[0.3em]
-  000-000-0000 \sep \href{mailto:you@example.com}{you@example.com} \sep \href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \sep \href{https://github.com/your-username}{github.com/your-username} \sep \href{https://your-portfolio.example}{Portfolio}
+  {\fontsize{26}{28}\selectfont\textbf{First Last Name}}\par\vspace{2pt}
+  {\small 000-000-0000 \sep \href{mailto:you@example.com}{you@example.com} \sep \href{https://linkedin.com/in/your-profile}{linkedin.com/in/your-profile} \sep \href{https://github.com/your-username}{github.com/your-username} \sep \href{https://your-portfolio.example}{Portfolio}}
 \end{center}
-\vspace{-0.6em}
+\vspace{-8pt}
 
 %=========== SUMMARY ===========
 \cvsection{Summary}
-Two or three sentences about what you do and what you are looking for. Put the key figures in \textbf{bold}, such as \textbf{N+ years} of experience.
+Engineer with \textbf{N+ years} of experience in your field. One sentence on what you build or do, one on your strengths. Current study or role, such as \textbf{SCHOOL (Program)}, and what you are looking for.
 
 %=========== EDUCATION ===========
 \cvsection{Education}
-\cvrow{\textbf{University Name}}{City, Country}
-\cvrow{\textit{Degree Name}}{\textit{Mon YYYY -- Mon YYYY}}
-\vspace{0.2em}
-\cvrow{\textbf{University Name}}{City, Country}
-\cvrow{\textit{Degree Name, Minor or specialization}}{\textit{Mon YYYY -- Mon YYYY}}
+\cvrowin{\textbf{University Name}}{City, Country}
+\cvrowin{\textit{M.S. in Program Name, GPA X.X / 4.0}}{\textit{Mon YYYY -- Mon YYYY}}
+\cvrowin{\textbf{University Name}}{City, Country}
+\cvrowin{\textit{B.S. in Program Name, Minor in Subject}}{\textit{Mon YYYY -- Mon YYYY}}
 
 %=========== EXPERIENCE ===========
 \cvsection{Experience}
-\cvrow{\textbf{Job Title} \sep \textit{Company Name}}{Mon YYYY -- Present \sep City, Country}
-\begin{cvlist}
-  \item \textbf{Action verb} what you did, with a \textbf{measurable result}.
-  \item \textbf{Action verb} what you did, with a \textbf{measurable result}.
-\end{cvlist}
-
-\cvrow{\textbf{Job Title} \sep \textit{Company Name}}{Mon YYYY -- Mon YYYY \sep City, Country}
-\begin{cvlist}
-  \item \textbf{Action verb} what you did, with a \textbf{measurable result}.
-\end{cvlist}
+\cvrow{\textbf{Job Title} \sep \textit{Company Name}}{\textit{Mon YYYY -- Present \sep City, Country}}
+\cvb{\textbf{Action verb} what you did, with a \textbf{measurable result}.}
+\cvb{\textbf{Action verb} what you did, with a \textbf{measurable result}.}
+\cvgap
+\cvrow{\textbf{Job Title} \sep \textit{Company Name}}{\textit{Mon YYYY -- Mon YYYY \sep City, Country}}
+\cvb{\textbf{Action verb} what you did, with a \textbf{measurable result}.}
+\cvgap
 
 %=========== PROJECTS ===========
 \cvsection{Projects}
-\cvrow{\textbf{Project Name} \sep \textit{Tech --- Tech --- Tech --- Tech}}{YYYY}
-\begin{cvlist}
-  \item \textbf{Action verb} what you built and the outcome.
-  \item Second bullet if needed.
-\end{cvlist}
-
-\cvrow{\textbf{Project Name} \sep \textit{Tech --- Tech --- Tech --- Tech}}{YYYY}
-\begin{cvlist}
-  \item \textbf{Action verb} what you built and the outcome.
-\end{cvlist}
+\cvrow{\textbf{Project Name} \sep \textit{Tech --- Tech --- Tech --- Tech}}{\href{https://github.com/your-username/project}{GitHub} \sep \textit{YYYY}}
+\cvb{\textbf{Action verb} what you built and the outcome.}
+\cvb{Second bullet if needed.}
+\cvgap
+\cvrow{\textbf{Project Name} \sep \textit{Tech --- Tech --- Tech --- Tech}}{\href{https://github.com/your-username/project}{GitHub} \sep \textit{YYYY}}
+\cvb{\textbf{Action verb} what you built and the outcome.}
 
 %=========== SKILLS ===========
 \cvsection{Skills}
-\textbf{Category 1}: Skill, Skill, Skill\\
-\textbf{Category 2}: Skill, Skill, Skill\\
-\textbf{Category 3}: Skill, Skill, Skill\\
-\textbf{Category 4}: Skill, Skill, Skill
+\hspace{\cvindent}\textbf{Category 1}: Skill, Skill, Skill\par
+\hspace{\cvindent}\textbf{Category 2}: Skill, Skill, Skill\par
+\hspace{\cvindent}\textbf{Category 3}: Skill, Skill, Skill\par
+\hspace{\cvindent}\textbf{Category 4}: Skill, Skill, Skill\par
 
 \end{document}

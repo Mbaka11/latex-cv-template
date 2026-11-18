@@ -1,109 +1,103 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage[left=1.4cm,right=1.4cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[left=0.45in,right=0.45in,top=0.35in,bottom=0.35in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[sfdefault,light]{roboto}
+\usepackage[sfdefault]{roboto}
 \renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\hyphenpenalty=10000 \exhyphenpenalty=10000 \emergencystretch=1.5em
 \definecolor{linkcolor}{HTML}{1A73E8}
 \hypersetup{colorlinks=true, urlcolor=linkcolor}
 
-% Separator used in the contact line and in titles
 \newcommand{\sep}{\textbar\ }
-% Section heading: bold caps with a rule under it
-\newcommand{\cvsection}[1]{\vspace{0.55em}\noindent{\textbf{\MakeUppercase{#1}}}\par\vspace{-0.4em}\noindent\rule{\linewidth}{0.4pt}\par\vspace{0.25em}}
-% Left text, right text on one line
-\newcommand{\cvrow}[2]{\noindent #1\hfill #2\par}
-% Bulleted list
-\newenvironment{cvlist}{\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet]}{\end{itemize}\vspace{0.3em}}
+\newlength{\cvindent}\setlength{\cvindent}{7pt}
+
+% Section heading: bold small caps, rule right under it
+\newcommand{\cvsection}[1]{\vspace{9pt}\noindent\textbf{\textsc{#1}}\par\nointerlineskip\vspace{1.5pt}\hrule height 0.4pt\vspace{5pt}}
+% Row: left text, right text, inset by \cvindent (cvrowin also insets the right side)
+\newcommand{\cvrow}[2]{\noindent\hspace{\cvindent}#1\hfill #2\par}
+\newcommand{\cvrowin}[2]{\noindent\hspace{\cvindent}#1\hfill #2\hspace{\cvindent}\par}
+% One bullet: bullet glued to the text, wrapped lines return to the bullet
+\newcommand{\cvb}[1]{{\fontsize{9.5}{10.8}\selectfont\leftskip=2\cvindent\noindent\textbullet\,#1\par}}
+% Space after an entry
+\newcommand{\cvgap}{\vspace{4pt}}
 
 \begin{document}
-\fontsize{10}{12}\selectfont
+\fontsize{10.5}{12}\selectfont
 
 %=========== HEADER ===========
 \begin{center}
-  {\fontsize{22}{24}\selectfont\textbf{Marsel Bakashov}}\\[0.3em]
-  +1 (514) 664-9320 \sep \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \sep \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{LinkedIn} \sep \href{https://github.com/Mbaka11}{github.com/Mbaka11} \sep \href{https://marselbak.netlify.app/}{Portfolio}
+  {\fontsize{26}{28}\selectfont\textbf{Marsel Bakashov}}\par\vspace{2pt}
+  {\small +1 (514) 664-9320 \sep \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \sep \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{linkedin.com/in/marsel-bakashov} \sep \href{https://github.com/Mbaka11}{github.com/Mbaka11} \sep \href{https://marselbak.netlify.app/}{Portfolio}}
 \end{center}
-\vspace{-0.6em}
+\vspace{-8pt}
 
 %=========== SUMMARY ===========
 \cvsection{Summary}
-Master's student in \textbf{Machine Learning} (Mila), with internships in \textbf{multi-agent systems}, \textbf{reinforcement learning} and \textbf{search}. I like turning machine learning into tools people actually use, especially where good ideas have to survive real data, constraints and users. I learn by building, and I enjoy teaching and organizing. I'm looking for an internship where I can own a problem end to end and keep growing with strong teams.
+Machine learning engineer with \textbf{4 internships} building AI systems, from multi-agent workflows to reinforcement learning and search at scale. Skilled in Python, PyTorch and cloud data tools. Master's student at \textbf{MILA (Machine Learning)}, I like turning ML into tools people actually use, and I learn by building, teaching and organizing. Looking for an internship where I can own a problem end to end.
 
 %=========== EDUCATION ===========
 \cvsection{Education}
-\cvrow{\textbf{University of Montreal / McGill -- Mila}}{Montreal, Canada}
-\cvrow{\textit{Professional Master's in Machine Learning, GPA 4.0 / 4.0}}{\textit{Jan 2026 -- Jan 2028}}
-\vspace{0.2em}
-\cvrow{\textbf{Polytechnique Montreal}}{Montreal, Canada}
-\cvrow{\textit{Bachelor of Software Engineering, GPA 3.7 / 4.0}}{\textit{Sep 2021 -- Dec 2025}}
-\vspace{0.2em}
-\cvrow{\textbf{Korea University College of Engineering}}{Seoul, South Korea}
-\cvrow{\textit{Bachelor of Computer Engineering (academic exchange)}}{\textit{Feb 2025 -- Jun 2025}}
+\cvrowin{\textbf{University of Montreal / McGill \textendash\ Mila}}{Montreal, QC}
+\cvrowin{\textit{Professional M.S. in Machine Learning, GPA 4.0 / 4.0}}{\textit{Jan 2026 \textendash\ Jan 2028}}
+\cvrowin{\textbf{Polytechnique Montreal}}{Montreal, QC}
+\cvrowin{\textit{B.S. in Software Engineering, GPA 3.7 / 4.0}}{\textit{Sep 2021 \textendash\ Dec 2025}}
+\cvrowin{\textbf{Korea University}}{Seoul, South Korea}
+\cvrowin{\textit{B.S. in Computer Engineering (academic exchange)}}{\textit{Feb 2025 \textendash\ Jun 2025}}
 
 %=========== EXPERIENCE ===========
 \cvsection{Experience}
-\cvrow{\textbf{Data Science \& ML Intern} \sep \textit{McKesson}}{May 2026 -- Dec 2026}
-\begin{cvlist}
-  \item \textbf{Developed} AI agents used by \textbf{100+ team members} to analyze business data and generate executive summaries, saving an estimated \textbf{10 hours per week per user}.
-  \item \textbf{Built} orchestrated multi-agent workflows at scale, where dozens of agents with dedicated tools and skills process data in sequence and pass results to one another.
-  \item \textbf{Processed} sensitive health data (PHI) via API integrations, prioritizing privacy and security.
-\end{cvlist}
-
-\cvrow{\textbf{Data Scientist \& RL Intern} \sep \textit{Intact Insurance}}{Sep 2025 -- Apr 2026}
-\begin{cvlist}
-  \item \textbf{Developed} reinforcement learning pricing policies that improved simulated long-term profitability under \textbf{10+ regulatory and business constraints}, using adaptive primal--dual optimization.
-  \item \textbf{Validated} policies in simulation on \textbf{millions of records}, measuring profit, volatility and CVaR risk.
-\end{cvlist}
-
-\cvrow{\textbf{Data Scientist Intern} \sep \textit{Radio-Canada / CBC}}{May 2024 -- Sep 2024}
-\begin{cvlist}
-  \item \textbf{Designed} an AI-powered indexing system unifying internal content sources for semantic and keyword search across \textbf{15M+ elements}, used by \textbf{100+ employees}.
-\end{cvlist}
-
-\cvrow{\textbf{Full-Stack Developer Intern} \sep \textit{Stingray}}{Sep 2023 -- Dec 2023}
-\begin{cvlist}
-  \item \textbf{Developed} full-stack features in an Agile team with analytics, testing, CI and code reviews.
-\end{cvlist}
-
-\cvrow{\textbf{Teaching Assistant, Discrete Mathematics} \sep \textit{Polytechnique Montreal}}{Jan 2024 -- Aug 2024}
-\begin{cvlist}
-  \item \textbf{Led} review sessions, graded assignments, and supported \textbf{80+ students}.
-\end{cvlist}
-
-\cvrow{\textbf{Sponsorship Director} \sep \textit{PolyAI Hackathon}}{Jan 2024 -- May 2024}
-\begin{cvlist}
-  \item \textbf{Raised} over \textbf{\$22,000} in funding and led a sponsorship team with weekly meetings.
-\end{cvlist}
+\cvrow{\textbf{Data Science \& ML Intern} \sep \textit{McKesson}}{\textit{May 2026 \textendash\ Dec 2026 \sep Montreal, QC}}
+\cvb{\textbf{Developed} AI agents used by \textbf{100+ team members} to analyze business data and generate executive summaries, saving an estimated \textbf{10 hours per week per user}.}
+\cvb{\textbf{Built} orchestrated multi-agent workflows at scale, where \textbf{dozens of agents} with dedicated tools and skills process data in sequence and pass results to one another.}
+\cvb{\textbf{Processed} sensitive health data (PHI) via API integrations, prioritizing privacy and security.}
+\cvgap
+\cvrow{\textbf{Data Scientist \& RL Intern} \sep \textit{Intact Insurance}}{\textit{Sep 2025 \textendash\ Apr 2026 \sep Montreal, QC}}
+\cvb{\textbf{Developed} reinforcement learning pricing policies that improved simulated long-term profitability under \textbf{10+ regulatory and business constraints}, using adaptive primal\textendash dual optimization.}
+\cvb{\textbf{Validated} policies in simulation on \textbf{millions of records}, measuring profit, volatility and CVaR risk.}
+\cvgap
+\cvrow{\textbf{Data Scientist Intern} \sep \textit{Radio-Canada / CBC}}{\textit{May 2024 \textendash\ Sep 2024 \sep Montreal, QC}}
+\cvb{\textbf{Designed} an AI-powered indexing system unifying internal content sources for semantic and keyword search across \textbf{15M+ elements}, used by \textbf{100+ employees}.}
+\cvgap
+\cvrow{\textbf{Full-Stack Developer Intern} \sep \textit{Stingray}}{\textit{Sep 2023 \textendash\ Dec 2023 \sep Montreal, QC}}
+\cvb{\textbf{Developed} full-stack features in an Agile team with analytics, testing, CI and code reviews.}
+\cvgap
+\cvrow{\textbf{Teaching Assistant, Discrete Mathematics} \sep \textit{Polytechnique Montreal}}{\textit{Jan 2024 \textendash\ Aug 2024 \sep Montreal, QC}}
+\cvb{\textbf{Led} review sessions, graded assignments, and supported \textbf{80+ students}.}
+\cvgap
+\cvrow{\textbf{Sponsorship Director} \sep \textit{PolyAI Hackathon}}{\textit{Jan 2024 \textendash\ May 2024 \sep Montreal, QC}}
+\cvb{\textbf{Raised} over \textbf{\$22,000} in funding and led a sponsorship team with weekly meetings.}
+\cvgap
 
 %=========== PROJECTS ===========
 \cvsection{Projects}
-\cvrow{\textbf{ApplyPilot} \sep \textit{JavaScript --- Node.js --- Chrome Extension --- LLM}}{\href{https://github.com/Mbaka11/ApplyPilot}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Built} a local Chrome extension and server that analyze postings, pick the best CV, draft cover letters with an LLM and autofill Workday and SuccessFactors forms (\textbf{380+ tests}); the user submits.
-\end{cvlist}
-
-\cvrow{\textbf{GravityGuyML} \sep \textit{Python --- Deep RL --- Gymnasium --- TensorFlow --- Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Built} a Gymnasium-compatible Pygame environment with procedural generation and deep RL agents (DQN, PPO, SAC, A2C).
-\end{cvlist}
-
-\cvrow{\textbf{Weather-Based Disease Outbreak Prediction} \sep \textit{Python --- scikit-learn --- XGBoost --- pandas}}{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}
-\begin{cvlist}
-  \item \textbf{Predicted} 11 disease outcomes from symptom and weather data (about 5,000 records) with KNN, SVM and XGBoost, reaching \textbf{0.98 macro F1} and \textbf{0.999 ROC-AUC}.
-\end{cvlist}
+\cvrow{\textbf{ApplyPilot} \sep \textit{JavaScript \textemdash\ Node.js \textemdash\ Chrome Extension \textemdash\ LLM}}{\href{https://github.com/Mbaka11/ApplyPilot}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Built} a local Chrome extension and Node.js server that find internship postings, pick the best CV and autofill Workday and SuccessFactors forms; the user always submits.}
+\cvb{\textbf{Drafted} tailored one-page cover letters with an LLM and tracked applications with statistics, backed by \textbf{380+ automated tests}.}
+\cvgap
+\cvrow{\textbf{Panoptes-Laplace} \sep \textit{Python \textemdash\ Ontology \textemdash\ Data Privacy \textemdash\ iOS}}{\href{https://github.com/Mbaka11/Panoptes-Laplace}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Designing} an open-source, consent-based personal intelligence platform that connects authorized personal data into an explorable \textbf{temporal ontology}.}
+\cvb{\textbf{Prototyped} a privacy-report inspector with source provenance and coverage reports, covered by tests.}
+\cvgap
+\cvrow{\textbf{ECG-AI-KG} \sep \textit{Python \textemdash\ Medical AI \textemdash\ Decision Support}}{\href{https://github.com/Mbaka11/ECG-AI-KG}{GitHub} \sep \textit{2026}}
+\cvb{\textbf{Researching} an AI tool that digitizes a smartphone photo of a paper ECG and flags suspected \textbf{life-threatening patterns} with an urgency level, for remote primary care in Kyrgyzstan.}
+\cvb{\textbf{Completed} the research phase and prepared the plan and EN/FR specifications; decision support only.}
+\cvgap
+\cvrow{\textbf{GravityGuyML} \sep \textit{Python \textemdash\ Deep RL \textemdash\ Gymnasium \textemdash\ TensorFlow \textemdash\ Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub} \sep \textit{2025}}
+\cvb{\textbf{Built} a Gymnasium-compatible Pygame environment with procedural generation and deep RL agents (\textbf{DQN, PPO, SAC, A2C}).}
+\cvb{\textbf{Added} deterministic seeds and episode replay for reproducible training and evaluation on held-out seeds.}
+\cvgap
 
 %=========== SKILLS ===========
 \cvsection{Skills}
-\textbf{Programming}: Python, SQL, C++, Java, Bash, R\\
-\textbf{ML / Data}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, Reinforcement Learning, AI Agents\\
-\textbf{Tools}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\\
-\textbf{Languages}: English, French, Russian, Spanish, Korean
+\hspace{\cvindent}\textbf{Programming}: Python, SQL, C++, Java, Bash, R\par
+\hspace{\cvindent}\textbf{ML / Data}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, Reinforcement Learning, AI Agents\par
+\hspace{\cvindent}\textbf{Tools}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\par
+\hspace{\cvindent}\textbf{Languages}: English, French, Russian, Spanish, Korean\par
 
 \end{document}
