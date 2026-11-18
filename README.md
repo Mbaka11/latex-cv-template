@@ -1,57 +1,53 @@
 # LaTeX CV
 
-The one-page CV I use for internship applications, written in LaTeX. The repository holds two templates: the original one and an updated one. Fork it, pick a template and replace the content with your own.
+The one-page CV I use for internship applications, written in LaTeX. The repository holds two templates, `classic` and `ats`. Fork it, pick one, and replace the content with your own.
 
 [Version française plus bas](#cv-latex-en-français)
 
 ## Templates
 
-| Folder | What it is |
+| Template | Layout |
 | --- | --- |
-| `template-1/` | Original template (current CV) |
-| `template-2/` | Updated template: centered header, ruled section headings, bold key metrics |
-| `temp/` | Local scratch folder, git-ignored (source resumes, drafts) |
+| `classic/` | Icon header, two-column summary and skills, dense grid with a date column |
+| `ats/` | Centered header, single column, ruled section headings, bold key metrics, plain text that applicant tracking systems parse well |
 
-### `template-1/`
-
-| Path | What it is |
+| `classic/` | `ats/` |
 | --- | --- |
-| `template/main.tex` | Blank template with placeholders, start here |
-| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | My English CV |
-| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | My French CV |
-| `my-cv/Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of my two CVs |
+| ![classic template preview](classic/preview.png) | ![ats template preview](ats/preview.png) |
 
-### `template-2/`
+Each template has the same shape:
 
-| Path | What it is |
-| --- | --- |
-| `template/main.tex` | Blank template with placeholders, start here |
-| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | My English CV in this layout |
-| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | My French CV in this layout |
-| `my-cv/Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of my two CVs |
+```
+<template>/
+├── main.tex, main.pdf                     blank template with placeholders, start here
+├── preview.png                            screenshot of the blank template
+└── my-cv/
+    ├── Marsel_Bakashov_CV_EN.tex / .pdf   my English CV
+    └── Marsel_Bakashov_CV_FR.tex / .pdf   my French CV
+```
 
-## Layout
-
-- Single page, A4, Roboto font, FontAwesome icons.
-- Two-column summary and skills block, then education, experience, projects and activities in a `tabularx` grid.
-- Section headings use one `\sechead{...}` macro, so the rules always end at the right margin.
-- Plain text is extractable from the PDF, which helps applicant tracking systems.
+`temp/` is a local scratch folder, ignored by git.
 
 ## Build
 
-You need a LaTeX distribution with the `roboto` and `fontawesome5` packages (MiKTeX and TeX Live both have them).
+You need a LaTeX distribution with the `roboto` package (and `fontawesome5` for `classic`). MiKTeX and TeX Live both have them.
 
 ```bash
-cd template-1/template
+# blank template
+cd classic          # or: cd ats
 pdflatex main.tex
+
+# my CVs
+cd classic/my-cv    # or: cd ats/my-cv
+pdflatex Marsel_Bakashov_CV_EN.tex
 ```
 
-You can also upload the folder to [Overleaf](https://www.overleaf.com) and compile `main.tex` there.
+You can also upload a folder to [Overleaf](https://www.overleaf.com) and compile the `.tex` file there.
 
 ## Reuse
 
 1. Fork or clone the repository.
-2. Copy `template-1/template/` or `template-2/template/`, then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
+2. Copy `classic/main.tex` or `ats/main.tex` and replace the placeholders: name, contact details, and the Summary, Education, Experience, Projects and Skills content.
 3. Remove any section you do not need.
 4. Recompile and check that the result still fits on one page.
 
@@ -63,49 +59,52 @@ MIT License.
 
 # CV LaTeX en français
 
-Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. Le dépôt contient deux templates : l'original et une version mise à jour. Faites-en une copie, choisissez un template et remplacez le contenu par le vôtre.
+Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. Le dépôt contient deux templates, `classic` et `ats`. Faites-en une copie, choisissez-en un et remplacez le contenu par le vôtre.
 
 ## Templates
 
-| Dossier | Description |
+| Template | Mise en page |
 | --- | --- |
-| `template-1/` | Template original (CV actuel) |
-| `template-2/` | Template mis à jour : en-tête centré, titres soulignés, chiffres clés en gras |
-| `temp/` | Dossier de travail local, ignoré par git (CV sources, brouillons) |
+| `classic/` | En-tête avec icônes, résumé et compétences sur deux colonnes, grille dense avec colonne de dates |
+| `ats/` | En-tête centré, une seule colonne, titres soulignés, chiffres clés en gras, texte brut bien lu par les systèmes de suivi des candidatures |
 
-### `template-1/`
-
-| Chemin | Description |
+| `classic/` | `ats/` |
 | --- | --- |
-| `template/main.tex` | Template vide avec des placeholders, point de départ |
-| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | Mon CV en anglais |
-| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | Mon CV en français |
-| `my-cv/Marsel_Bakashov_CV_*.pdf` | PDF compilés de mes deux CV |
+| ![aperçu du template classic](classic/preview.png) | ![aperçu du template ats](ats/preview.png) |
 
-### `template-2/`
+Chaque template a la même structure :
 
-| Chemin | Description |
-| --- | --- |
-| `template/main.tex` | Template vide avec des placeholders, point de départ |
-| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | Mon CV en anglais dans cette mise en page |
-| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | Mon CV en français dans cette mise en page |
-| `my-cv/Marsel_Bakashov_CV_*.pdf` | PDF compilés de mes deux CV |
+```
+<template>/
+├── main.tex, main.pdf                     template vide avec placeholders, point de départ
+├── preview.png                            capture du template vide
+└── my-cv/
+    ├── Marsel_Bakashov_CV_EN.tex / .pdf   mon CV en anglais
+    └── Marsel_Bakashov_CV_FR.tex / .pdf   mon CV en français
+```
+
+`temp/` est un dossier de travail local, ignoré par git.
 
 ## Compilation
 
-Il faut une distribution LaTeX avec les paquets `roboto` et `fontawesome5` (MiKTeX et TeX Live les incluent).
+Il faut une distribution LaTeX avec le paquet `roboto` (et `fontawesome5` pour `classic`). MiKTeX et TeX Live les incluent.
 
 ```bash
-cd template-1/template
+# template vide
+cd classic          # ou : cd ats
 pdflatex main.tex
+
+# mes CV
+cd classic/my-cv    # ou : cd ats/my-cv
+pdflatex Marsel_Bakashov_CV_FR.tex
 ```
 
-Le dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
+Un dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
 
 ## Réutilisation
 
 1. Copiez ou clonez le dépôt.
-2. Copiez `template-1/template/` ou `template-2/template/`, puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
+2. Copiez `classic/main.tex` ou `ats/main.tex` et remplacez les placeholders : nom, coordonnées, et contenu du résumé, de la formation, de l'expérience, des projets et des compétences.
 3. Supprimez les sections inutiles.
 4. Recompilez et vérifiez que le CV tient toujours sur une page.
 
