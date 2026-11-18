@@ -9,7 +9,7 @@ The one-page CV I use for internship applications, written in LaTeX. The reposit
 | Folder | What it is |
 | --- | --- |
 | `template-1/` | Original template (current CV) |
-| `template-2/` | Updated template, built from a new resume (in progress) |
+| `template-2/` | Updated template: centered header, ruled section headings, bold key metrics |
 | `temp/` | Local scratch folder, git-ignored (source resumes, drafts) |
 
 ### `template-1/`
@@ -19,6 +19,15 @@ The one-page CV I use for internship applications, written in LaTeX. The reposit
 | `template/main.tex` | Blank template with placeholders, start here |
 | `my-cv/Marsel_Bakashov_CV_EN/main.tex` | My English CV |
 | `my-cv/Marsel_Bakashov_CV_FR/main.tex` | My French CV |
+| `my-cv/Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of my two CVs |
+
+### `template-2/`
+
+| Path | What it is |
+| --- | --- |
+| `template/main.tex` | Blank template with placeholders, start here |
+| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | My English CV in this layout |
+| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | My French CV in this layout |
 | `my-cv/Marsel_Bakashov_CV_*.pdf` | Compiled PDFs of my two CVs |
 
 ## Layout
@@ -42,7 +51,7 @@ You can also upload the folder to [Overleaf](https://www.overleaf.com) and compi
 ## Reuse
 
 1. Fork or clone the repository.
-2. Copy `template-1/template/` (or another template folder), then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
+2. Copy `template-1/template/` or `template-2/template/`, then in its `main.tex`, replace the name, contact details, and the About, Skills, Education, Experience, Projects and Activities content.
 3. Remove any section you do not need.
 4. Recompile and check that the result still fits on one page.
 
@@ -61,7 +70,7 @@ Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. 
 | Dossier | Description |
 | --- | --- |
 | `template-1/` | Template original (CV actuel) |
-| `template-2/` | Template mis à jour, construit à partir d'un nouveau CV (en cours) |
+| `template-2/` | Template mis à jour : en-tête centré, titres soulignés, chiffres clés en gras |
 | `temp/` | Dossier de travail local, ignoré par git (CV sources, brouillons) |
 
 ### `template-1/`
@@ -71,6 +80,15 @@ Le CV d'une page que j'utilise pour mes candidatures de stage, écrit en LaTeX. 
 | `template/main.tex` | Template vide avec des placeholders, point de départ |
 | `my-cv/Marsel_Bakashov_CV_EN/main.tex` | Mon CV en anglais |
 | `my-cv/Marsel_Bakashov_CV_FR/main.tex` | Mon CV en français |
+| `my-cv/Marsel_Bakashov_CV_*.pdf` | PDF compilés de mes deux CV |
+
+### `template-2/`
+
+| Chemin | Description |
+| --- | --- |
+| `template/main.tex` | Template vide avec des placeholders, point de départ |
+| `my-cv/Marsel_Bakashov_CV_EN/main.tex` | Mon CV en anglais dans cette mise en page |
+| `my-cv/Marsel_Bakashov_CV_FR/main.tex` | Mon CV en français dans cette mise en page |
 | `my-cv/Marsel_Bakashov_CV_*.pdf` | PDF compilés de mes deux CV |
 
 ## Compilation
@@ -87,7 +105,7 @@ Le dossier peut aussi être importé dans [Overleaf](https://www.overleaf.com).
 ## Réutilisation
 
 1. Copiez ou clonez le dépôt.
-2. Copiez `template-1/template/` (ou un autre dossier de template), puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
+2. Copiez `template-1/template/` ou `template-2/template/`, puis dans son `main.tex`, remplacez le nom, les coordonnées et le contenu de chaque section.
 3. Supprimez les sections inutiles.
 4. Recompilez et vérifiez que le CV tient toujours sur une page.
 

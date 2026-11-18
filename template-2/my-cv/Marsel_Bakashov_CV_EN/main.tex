@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage[left=1.4cm,right=1.4cm,top=1cm,bottom=1cm]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[sfdefault,light]{roboto}
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{linkcolor}{HTML}{1A73E8}
+\hypersetup{colorlinks=true, urlcolor=linkcolor}
+
+% Separator used in the contact line and in titles
+\newcommand{\sep}{\textbar\ }
+% Section heading: bold caps with a rule under it
+\newcommand{\cvsection}[1]{\vspace{0.55em}\noindent{\textbf{\MakeUppercase{#1}}}\par\vspace{-0.4em}\noindent\rule{\linewidth}{0.4pt}\par\vspace{0.25em}}
+% Left text, right text on one line
+\newcommand{\cvrow}[2]{\noindent #1\hfill #2\par}
+% Bulleted list
+\newenvironment{cvlist}{\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet]}{\end{itemize}\vspace{0.3em}}
+
+\begin{document}
+\fontsize{10}{12}\selectfont
+
+%=========== HEADER ===========
+\begin{center}
+  {\fontsize{22}{24}\selectfont\textbf{Marsel Bakashov}}\\[0.3em]
+  +1 (514) 664-9320 \sep \href{mailto:m.bakashov11@gmail.com}{m.bakashov11@gmail.com} \sep \href{https://www.linkedin.com/in/marsel-bakashov-813643213/}{LinkedIn} \sep \href{https://github.com/Mbaka11}{github.com/Mbaka11} \sep \href{https://marselbak.netlify.app/}{Portfolio}
+\end{center}
+\vspace{-0.6em}
+
+%=========== SUMMARY ===========
+\cvsection{Summary}
+Master's student in \textbf{Machine Learning} (Mila), with internships in \textbf{multi-agent systems}, \textbf{reinforcement learning} and \textbf{search}. I like turning machine learning into tools people actually use, especially where good ideas have to survive real data, constraints and users. I learn by building, and I enjoy teaching and organizing. I'm looking for an internship where I can own a problem end to end and keep growing with strong teams.
+
+%=========== EDUCATION ===========
+\cvsection{Education}
+\cvrow{\textbf{University of Montreal / McGill -- Mila}}{Montreal, Canada}
+\cvrow{\textit{Professional Master's in Machine Learning, GPA 4.0 / 4.0}}{\textit{Jan 2026 -- Jan 2028}}
+\vspace{0.2em}
+\cvrow{\textbf{Polytechnique Montreal}}{Montreal, Canada}
+\cvrow{\textit{Bachelor of Software Engineering, GPA 3.7 / 4.0}}{\textit{Sep 2021 -- Dec 2025}}
+\vspace{0.2em}
+\cvrow{\textbf{Korea University College of Engineering}}{Seoul, South Korea}
+\cvrow{\textit{Bachelor of Computer Engineering (academic exchange)}}{\textit{Feb 2025 -- Jun 2025}}
+
+%=========== EXPERIENCE ===========
+\cvsection{Experience}
+\cvrow{\textbf{Data Science \& ML Intern} \sep \textit{McKesson}}{May 2026 -- Dec 2026}
+\begin{cvlist}
+  \item \textbf{Developed} AI agents used by \textbf{100+ team members} to analyze business data and generate executive summaries, saving an estimated \textbf{10 hours per week per user}.
+  \item \textbf{Built} orchestrated multi-agent workflows at scale, where dozens of agents with dedicated tools and skills process data in sequence and pass results to one another.
+  \item \textbf{Processed} sensitive health data (PHI) via API integrations, prioritizing privacy and security.
+\end{cvlist}
+
+\cvrow{\textbf{Data Scientist \& RL Intern} \sep \textit{Intact Insurance}}{Sep 2025 -- Apr 2026}
+\begin{cvlist}
+  \item \textbf{Developed} reinforcement learning pricing policies that improved simulated long-term profitability under \textbf{10+ regulatory and business constraints}, using adaptive primal--dual optimization.
+  \item \textbf{Validated} policies in simulation on \textbf{millions of records}, measuring profit, volatility and CVaR risk.
+\end{cvlist}
+
+\cvrow{\textbf{Data Scientist Intern} \sep \textit{Radio-Canada / CBC}}{May 2024 -- Sep 2024}
+\begin{cvlist}
+  \item \textbf{Designed} an AI-powered indexing system unifying internal content sources for semantic and keyword search across \textbf{15M+ elements}, used by \textbf{100+ employees}.
+\end{cvlist}
+
+\cvrow{\textbf{Full-Stack Developer Intern} \sep \textit{Stingray}}{Sep 2023 -- Dec 2023}
+\begin{cvlist}
+  \item \textbf{Developed} full-stack features in an Agile team with analytics, testing, CI and code reviews.
+\end{cvlist}
+
+\cvrow{\textbf{Teaching Assistant, Discrete Mathematics} \sep \textit{Polytechnique Montreal}}{Jan 2024 -- Aug 2024}
+\begin{cvlist}
+  \item \textbf{Led} review sessions, graded assignments, and supported \textbf{80+ students}.
+\end{cvlist}
+
+\cvrow{\textbf{Sponsorship Director} \sep \textit{PolyAI Hackathon}}{Jan 2024 -- May 2024}
+\begin{cvlist}
+  \item \textbf{Raised} over \textbf{\$22,000} in funding and led a sponsorship team with weekly meetings.
+\end{cvlist}
+
+%=========== PROJECTS ===========
+\cvsection{Projects}
+\cvrow{\textbf{ApplyPilot} \sep \textit{JavaScript --- Node.js --- Chrome Extension --- LLM}}{\href{https://github.com/Mbaka11/ApplyPilot}{GitHub}}
+\begin{cvlist}
+  \item \textbf{Built} a local Chrome extension and server that analyze postings, pick the best CV, draft cover letters with an LLM and autofill Workday and SuccessFactors forms (\textbf{380+ tests}); the user submits.
+\end{cvlist}
+
+\cvrow{\textbf{GravityGuyML} \sep \textit{Python --- Deep RL --- Gymnasium --- TensorFlow --- Pygame}}{\href{https://github.com/Mbaka11/Gravity-Guy-ML}{GitHub}}
+\begin{cvlist}
+  \item \textbf{Built} a Gymnasium-compatible Pygame environment with procedural generation and deep RL agents (DQN, PPO, SAC, A2C).
+\end{cvlist}
+
+\cvrow{\textbf{Weather-Based Disease Outbreak Prediction} \sep \textit{Python --- scikit-learn --- XGBoost --- pandas}}{\href{https://github.com/Mbaka11/20251R0136COSE47101}{GitHub}}
+\begin{cvlist}
+  \item \textbf{Predicted} 11 disease outcomes from symptom and weather data (about 5,000 records) with KNN, SVM and XGBoost, reaching \textbf{0.98 macro F1} and \textbf{0.999 ROC-AUC}.
+\end{cvlist}
+
+%=========== SKILLS ===========
+\cvsection{Skills}
+\textbf{Programming}: Python, SQL, C++, Java, Bash, R\\
+\textbf{ML / Data}: PyTorch, Scikit-learn, TensorFlow, Hugging Face, MLflow, Reinforcement Learning, AI Agents\\
+\textbf{Tools}: Azure, Databricks, Snowflake, Power BI, Airflow, Docker, Git\\
+\textbf{Languages}: English, French, Russian, Spanish, Korean
+
+\end{document}
